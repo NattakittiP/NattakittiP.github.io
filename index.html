@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Personal academic webpage of Nattakitti (Ohm) Piyavechvirat – Informatics student at Yuan Ze University, AI & bioinformatics researcher, and youth policy advocate.">
 
-    <!-- เอา CSS มาใส่ตรงนี้เลย -->
     <style>
         :root {
             --bg: #0f1121;
@@ -227,7 +226,6 @@
     <div class="container header-flex">
         <div class="profile-block">
             <div class="avatar">
-                <!-- ต้องมีไฟล์ชื่อ profile.jpg อยู่ใน repo เดียวกัน -->
                 <img src="profile.jpg" alt="Profile photo of Nattakitti Piyavechvirat">
             </div>
         </div>
@@ -243,6 +241,7 @@
                 <a href="#about">About</a>
                 <a href="#research">Research</a>
                 <a href="#projects">Projects</a>
+                <a href="#rewards">Rewards</a>
                 <a href="#leadership">Leadership &amp; Policy</a>
                 <a href="#contact">Contact</a>
             </nav>
@@ -251,6 +250,7 @@
 </header>
 
 <main class="container">
+    <!-- ABOUT -->
     <section id="about" class="section">
         <h2>About</h2>
         <p>
@@ -272,44 +272,69 @@
             practice alone. Transitioning to Yuan Ze University allowed me to integrate medical knowledge with
             informatics and machine learning — a combination that now drives my research and long-term goals.
         </p>
+        <p>
+            My research interests include <strong>bioinformatics</strong>,
+            <strong>machine learning validation</strong>,
+            <strong>data-driven health systems</strong>, and
+            <strong>AI for public policy innovation</strong>. I am particularly
+            interested in building <strong>transparent and ethical ML pipelines</strong>
+            that avoid data leakage, report realistic performance, and support
+            <strong>evidence-based decision making</strong> in health and policy.
+        </p>
     </section>
 
+    <!-- RESEARCH -->
     <section id="research" class="section">
         <h2>Research</h2>
 
         <article class="card">
-            <h3>WBV–TCR Bioinformatics Study</h3>
+            <h3>Blood Viscosity and Triglyceride Clearance: A Data-Driven Model for Cancer Risk Stratification</h3>
             <p class="meta">
-                Whole Blood Viscosity &amp; Triglyceride Clearance Rate as Metabolic–Oncologic Biomarkers
+                Recommended for publication at <strong>IEEE ICBCB 2026</strong> (EI Compendex &amp; Scopus Proceedings)
             </p>
             <p>
-                I developed a <strong>leakage-controlled machine learning framework</strong> to investigate
-                whether whole blood viscosity (WBV) and triglyceride clearance rate (TCR) can serve as
-                early metabolic–oncologic markers. Using a retrospective cohort of
-                <strong>1,500 patients</strong>, the study focuses on rigorous validation,
-                reproducibility, and transparent reporting in biomedical informatics.
+                This study proposes a <strong>data-driven risk stratification model</strong> using
+                whole blood viscosity (WBV) and triglyceride clearance rate (TCR) as potential
+                metabolic–oncologic markers. Using a retrospective cohort of
+                <strong>1,500 patients</strong>, I built a leakage-controlled machine learning pipeline
+                to explore whether simple, routinely collected physiological and biochemical
+                measurements can meaningfully predict cancer risk.
             </p>
             <p>
-                One version of this work has been <strong>recommended for publication at IEEE ICBCB 2026</strong>
-                (EI Compendex &amp; Scopus proceedings), and an extended manuscript is being prepared for submission to
-                <em>Current Bioinformatics</em> (Q3).
+                The work focuses on robust feature preprocessing, careful partitioning of data
+                to prevent information leakage, and realistic performance evaluation. Beyond
+                the numerical results, the study emphasizes the importance of
+                <strong>methodological transparency</strong> in biomedical ML, especially when
+                models are intended to inform early screening or risk communication in
+                real-world health systems.
             </p>
         </article>
 
         <article class="card">
-            <h3>Methodology & Interests</h3>
+            <h3>Leakage-Controlled Machine Learning Reveals a Reproducible Null Association Between Whole Blood Viscosity and Triglyceride Clearance Rate</h3>
+            <p class="meta">
+                Journal manuscript in preparation for submission to <em>Current Bioinformatics</em> (Q3)
+            </p>
             <p>
-                My research interests include <strong>bioinformatics</strong>,
-                <strong>machine learning validation</strong>,
-                <strong>data-driven health systems</strong>, and
-                <strong>AI for public policy innovation</strong>. I am particularly
-                interested in building <strong>transparent and ethical ML pipelines</strong>
-                that avoid data leakage, report realistic performance, and support
-                <strong>evidence-based decision making</strong> in health and policy.
+                Building on the same clinical cohort, this work investigates the relationship
+                between WBV and TCR under a <strong>strict, leakage-controlled validation
+                framework</strong>. By systematically addressing common sources of bias —
+                such as patient-level overlap between training and testing sets and
+                inappropriate feature scaling — the study demonstrates a
+                <strong>reproducible null association</strong> between WBV and TCR.
+            </p>
+            <p>
+                Rather than forcing a positive result, the paper argues for the scientific
+                value of well-documented null findings in bioinformatics. It shows how
+                rigorous evaluation, clear reporting of negative results, and openly
+                described pipelines can prevent overclaiming in biomedical machine
+                learning and support more reliable translation of models into clinical and
+                public health contexts.
             </p>
         </article>
     </section>
 
+    <!-- PROJECTS -->
     <section id="projects" class="section">
         <h2>Selected Projects</h2>
 
@@ -325,16 +350,6 @@
         </article>
 
         <article class="card">
-            <h3>World Robot Olympiad – Regular Senior (Thailand)</h3>
-            <p>
-                Designed and programmed autonomous robots for national competition, achieving
-                <strong>5th place nationwide</strong>. This experience sparked my long-term
-                interest in robotics, engineering, and problem-solving through hands-on projects.
-            </p>
-            <p class="tag">Robotics · C++ · Teamwork</p>
-        </article>
-
-        <article class="card">
             <h3>T-SCEPT 2025 – National Thinkathon on Tobacco &amp; Substance Control</h3>
             <p>
                 Founder and Chair of <strong>T-SCEPT 2025</strong>, a national policy-focused
@@ -346,6 +361,22 @@
         </article>
     </section>
 
+    <!-- REWARDS -->
+    <section id="rewards" class="section">
+        <h2>Rewards</h2>
+
+        <article class="card">
+            <h3>World Robot Olympiad – Regular Senior (Thailand)</h3>
+            <p>
+                Designed and programmed autonomous robots for national competition, achieving
+                <strong>5th place nationwide</strong>. This experience sparked my long-term
+                interest in robotics, engineering, and problem-solving through hands-on projects.
+            </p>
+            <p class="tag">Robotics · C++ · Teamwork</p>
+        </article>
+    </section>
+
+    <!-- LEADERSHIP & POLICY -->
     <section id="leadership" class="section">
         <h2>Leadership &amp; Policy Engagement</h2>
 
@@ -368,16 +399,26 @@
         </article>
 
         <article class="card">
-            <h3>SMST &amp; Youth Representation</h3>
+            <h3>National Representative – SMST (2024)</h3>
             <p>
-                Served as a <strong>National Representative (2024)</strong> and later an
-                <strong>Ordinary Committee Member (2025)</strong> of the Medical Students’ Federation
-                of Thailand under the Royal Patronage (SMST), actively engaging with national health
-                policy discussions and youth advocacy.
+                Served as a <strong>National Representative (2024)</strong> of the Medical Students’
+                Federation of Thailand under the Royal Patronage (SMST), engaging with national
+                health stakeholders and contributing youth perspectives to discussions on health
+                policy and medical education.
+            </p>
+        </article>
+
+        <article class="card">
+            <h3>Ordinary Committee Member – SMST (2025)</h3>
+            <p>
+                Continued my involvement with SMST as an <strong>Ordinary Committee Member (2025)</strong>,
+                supporting organizational activities, advocacy work, and coordination between
+                student representatives and national-level health policy forums.
             </p>
         </article>
     </section>
 
+    <!-- CONTACT -->
     <section id="contact" class="section">
         <h2>Contact</h2>
         <p>
@@ -401,3 +442,5 @@
 </footer>
 </body>
 </html>
+
+
