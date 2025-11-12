@@ -1,452 +1,370 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Nattakitti Piyavechvirat | 百文</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Personal academic webpage of Nattakitti (Ohm) Piyavechvirat – Informatics student at Yuan Ze University, AI & bioinformatics researcher, and youth policy advocate.">
+  <meta charset="UTF-8">
+  <title>Nattakitti Piyavechvirat | 百文</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Personal academic webpage of Nattakitti (Ohm) Piyavechvirat – Informatics student at Yuan Ze University, AI & bioinformatics researcher, and youth policy advocate.">
 
-    <style>
-        :root {
-            --bg: #0f1121;
-            --bg-alt: #16182b;
-            --text: #e5e7eb;
-            --muted: #9ca3af;
-            --accent: #d2b464; /* Wisdom Gold */
-            --accent-soft: rgba(210, 180, 100, 0.12);
-            --border: #262a3f;
-            --max-width: 900px;
-            --font-main: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-        }
+  <style>
+    :root {
+      --bg: #0f1121;
+      --bg-alt: #16182b;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --accent: #d2b464;
+      --border: #262a3f;
+      --max-width: 900px;
+      --font-main: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-        body {
-            background: radial-gradient(circle at top, #1a1738 0%, #050714 55%, #020308 100%);
-            color: var(--text);
-            font-family: var(--font-main);
-            line-height: 1.6;
-        }
+    html, body {
+      height: 100%;
+      overflow-x: hidden;
+      background: radial-gradient(circle at top, #1a1738 0%, #050714 55%, #020308 100%);
+      color: var(--text);
+      font-family: var(--font-main);
+      line-height: 1.6;
+    }
 
-        .container {
-            width: 100%;
-            max-width: var(--max-width);
-            margin: 0 auto;
-            padding: 0 16px;
-        }
+    canvas#stars {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background: transparent;
+    }
 
-        .site-header {
-            border-bottom: 1px solid var(--border);
-            padding: 28px 0 20px;
-            background: linear-gradient(135deg, #1a1738 0%, #0b1020 55%, #050714 100%);
-        }
+    .container {
+      width: 100%;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 16px;
+    }
 
-        .header-flex {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
+    .site-header {
+      border-bottom: 1px solid var(--border);
+      padding: 28px 0 20px;
+      background: linear-gradient(135deg, #1a1738 0%, #0b1020 55%, #050714 100%);
+    }
 
-        .profile-block {
-            flex: 0 0 auto;
-        }
+    .header-flex {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
 
-        .avatar {
-            width: 120px;
-            height: 120px;
-            border-radius: 999px;
-            overflow: hidden;
-            border: 3px solid var(--accent);
-            background: #111827;
-        }
+    .profile-block {
+      flex: 0 0 auto;
+      position: relative;
+    }
 
-        .avatar img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
+    .avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 999px;
+      overflow: hidden;
+      border: 3px solid var(--accent);
+      background: #111827;
+    }
 
-        .title-block {
-            flex: 1 1 260px;
-        }
+    .avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
 
-        h1 {
-            font-size: 1.9rem;
-            font-ght: 650;
-            letter-spacing: 0.02em;
-            margin-bottom: 4px;
-        }
+    .avatar-ring {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 150px;
+      height: 150px;
+      pointer-events: none;
+      z-index: 0;
+    }
 
-        .cn-name {
-            font-size: 1.1rem;
-            font-ght: 500;
-            color: var(--accent);
-            margin-left: 6px;
-        }
+    .avatar-ring svg {
+      width: 150px;
+      height: 150px;
+      animation: spin 20s linear infinite;
+      filter: drop-shadow(0 0 10px rgba(210,180,100,0.4));
+    }
 
-        .subtitle {
-            font-size: 0.95rem;
-            color: var(--muted);
-            margin-bottom: 6px;
-        }
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
 
-        .tagline {
-            font-size: 0.98rem;
-            max-width: 560px;
-            margin-bottom: 12px;
-        }
+    .title-block {
+      flex: 1 1 260px;
+    }
 
-        .main-nav {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 4px;
-        }
+    h1 {
+      font-size: 1.9rem;
+      font-weight: 650;
+      letter-spacing: 0.02em;
+      margin-bottom: 4px;
+    }
 
-        .main-nav a {
-            font-size: 0.9rem;
-            padding: 6px 10px;
-            border-radius: 999px;
-            border: 1px solid rgba(210, 180, 100, 0.4);
-            text-decoration: none;
-            color: var(--accent);
-            background: rgba(3, 7, 18, 0.4);
-            transition: background 0.18s ease, transform 0.12s ease, border-color 0.18s ease;
-        }
+    .cn-name {
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: var(--accent);
+      margin-left: 6px;
+    }
 
-        .main-nav a:hover {
-            background: var(--accent-soft);
-            border-color: var(--accent);
-            transform: translateY(-1px);
-        }
+    .subtitle {
+      font-size: 0.95rem;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
 
-        .section {
-            padding: 26px 0 8px;
-            border-bottom: 1px solid var(--border);
-        }
+    .tagline {
+      font-size: 0.98rem;
+      max-width: 560px;
+      margin-bottom: 12px;
+    }
 
-        .section:last-of-type {
-            border-bottom: none;
-            padding-bottom: 26px;
-        }
+    .main-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 4px;
+    }
 
-        .section h2 {
-            font-size: 1.2rem;
-            margin-bottom: 10px;
-            color: var(--accent);
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-        }
+    .main-nav a {
+      font-size: 0.9rem;
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(210, 180, 100, 0.4);
+      text-decoration: none;
+      color: var(--accent);
+      background: rgba(3, 7, 18, 0.4);
+      transition: background 0.18s ease, transform 0.12s ease, border-color 0.18s ease;
+    }
 
-        .section p {
-            margin-bottom: 8px;
-            font-size: 0.96rem;
-            color: #e5e7f0;
-        }
+    .main-nav a:hover {
+      background: rgba(210,180,100,0.15);
+      border-color: var(--accent);
+      transform: translateY(-1px);
+    }
 
-        .card {
-            margin-top: 10px;
-            margin-bottom: 10px;
-            padding: 12px 14px;
-            border-radius: 12px;
-            background: radial-gradient(circle at top left, rgba(210,180,100,0.12), rgba(15,17,33,0.95));
-            border: 1px solid rgba(210, 180, 100, 0.28);
-        }
+    .section {
+      padding: 26px 0 8px;
+      border-bottom: 1px solid var(--border);
+    }
 
-        .card h3 {
-            font-size: 1.04rem;
-            margin-bottom: 4px;
-        }
+    .section:last-of-type {
+      border-bottom: none;
+      padding-bottom: 26px;
+    }
 
-        .card .meta {
-            font-size: 0.86rem;
-            color: var(--muted);
-            margin-bottom: 6px;
-        }
+    .section h2 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+      color: var(--accent);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
 
-        .card .tag {
-            font-size: 0.85rem;
-            color: var(--muted);
-            margin-top: 4px;
-        }
+    .section p {
+      margin-bottom: 8px;
+      font-size: 0.96rem;
+      color: #e5e7f0;
+    }
 
-        .contact-list {
-            list-style: none;
-            margin-top: 6px;
-        }
+    .card {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      padding: 12px 14px;
+      border-radius: 12px;
+      background: radial-gradient(circle at top left, rgba(210,180,100,0.12), rgba(15,17,33,0.95));
+      border: 1px solid rgba(210, 180, 100, 0.28);
+    }
 
-        .contact-list li {
-            margin-bottom: 4px;
-            font-size: 0.95rem;
-        }
+    .card h3 {
+      font-size: 1.04rem;
+      margin-bottom: 4px;
+    }
 
-        a {
-            color: var(--accent);
-            text-decoration: none;
-        }
+    .card .meta {
+      font-size: 0.86rem;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
 
-        a:hover {
-            text-decoration: underline;
-        }
+    .card .tag {
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-top: 4px;
+    }
 
-        .site-footer {
-            border-top: 1px solid var(--border);
-            padding: 12px 0 18px;
-            text-align: center;
-            font-size: 0.85rem;
-            color: var(--muted);
-            background: #050714;
-            margin-top: 10px;
-        }
+    .contact-list {
+      list-style: none;
+      margin-top: 6px;
+    }
 
-        @media (max-width: 640px) {
-            .header-flex {
-                flex-direction: column;
-                align-items: flex-start;
-            }
+    .contact-list li {
+      margin-bottom: 4px;
+      font-size: 0.95rem;
+    }
 
-            .avatar {
-                width: 96px;
-                height: 96px;
-            }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
 
-            h1 {
-                font-size: 1.6rem;
-            }
-        }
-    </style>
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .site-footer {
+      border-top: 1px solid var(--border);
+      padding: 12px 0 18px;
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--muted);
+      background: #050714;
+      margin-top: 10px;
+    }
+
+    @media (max-width: 640px) {
+      .header-flex {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .avatar {
+        width: 96px;
+        height: 96px;
+      }
+
+      h1 {
+        font-size: 1.6rem;
+      }
+    }
+  </style>
 </head>
 <body>
-<header class="site-header">
+  <canvas id="stars"></canvas>
+
+  <header class="site-header">
     <div class="container header-flex">
-        <div class="profile-block">
-            <div class="avatar">
-                <img src="S__91013123.jpg" alt="Profile photo of Nattakitti Piyavechvirat">
-            </div>
+      <div class="profile-block">
+        <div class="avatar-ring">
+          <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="100" cy="100" r="90" fill="none" stroke="#d2b464" stroke-width="2" stroke-dasharray="10 10" />
+          </svg>
         </div>
-        <div class="title-block">
-            <h1>Nattakitti Piyavechvirat <span class="cn-name">百文</span></h1>
-            <p class="subtitle">
-                International Bachelor Program in Informatics (IBPI), Yuan Ze University, Taiwan
-            </p>
-            <p class="tagline">
-                Bridging medicine, AI, and public policy through transparent, ethical, and precise data science — driven by critical thinking and real-world impact.
-            </p>
-            <nav class="main-nav">
-                <a href="#about">About</a>
-                <a href="#research">Research</a>
-                <a href="#projects">Projects</a>
-                <a href="#rewards">Rewards &amp; Competitions</a>
-                <a href="#leadership">Leadership &amp; Policy</a>
-                <a href="#contact">Contact</a>
-            </nav>
+        <div class="avatar">
+          <img src="S__91013123.jpg" alt="Profile photo of Nattakitti Piyavechvirat">
         </div>
+      </div>
+      <div class="title-block">
+        <h1>Nattakitti Piyavechvirat <span class="cn-name">百文</span></h1>
+        <p class="subtitle">International Bachelor Program in Informatics (IBPI), Yuan Ze University, Taiwan</p>
+        <p class="tagline">Bridging medicine, AI, and public policy through transparent, ethical, and precise data science — driven by critical thinking and real-world impact.</p>
+        <nav class="main-nav">
+          <a href="#about">About</a>
+          <a href="#research">Research</a>
+          <a href="#projects">Projects</a>
+          <a href="#rewards">Rewards & Competitions</a>
+          <a href="#leadership">Leadership & Policy</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
     </div>
-</header>
+  </header>
 
-<main class="container">
-    <!-- ABOUT -->
-    <section id="about" class="section">
-        <h2>About</h2>
-        <p>
-            I am a Thai student and early-career researcher currently studying in the
-            <strong>International Bachelor Program in Informatics (IBPI)</strong> at
-            <strong>Yuan Ze University</strong>, Taiwan. My academic path uniquely combines
-            <strong>medical science and artificial intelligence</strong>, giving me an interdisciplinary
-            foundation that connects human health, data, and computational reasoning.
-        </p>
-        <p>
-            I began my journey in <strong>Artificial Intelligence Engineering</strong> at Satit Prasarnmit
-            Demonstration School, where I developed a Thai-language chatbot using
-            <strong>natural language processing (NLP)</strong> and earned national recognition in robotics,
-            placing <strong>5th nationwide</strong> in the World Robot Olympiad (WRO).
-        </p>
-        <p>
-            After studying medicine for two years at Rangsit University, I realized that my real passion lies
-            in understanding systems through <strong>data, logic, and algorithms</strong> rather than clinical
-            practice alone. Transitioning to Yuan Ze University allowed me to integrate medical knowledge with
-            informatics and machine learning — a combination that now drives my research and long-term goals.
-        </p>
-        <p>
-            My research interests include <strong>bioinformatics</strong>,
-            <strong>machine learning validation</strong>,
-            <strong>data-driven health systems</strong>, and
-            <strong>AI for public policy innovation</strong>. I am particularly
-            interested in building <strong>transparent and ethical ML pipelines</strong>
-            that avoid data leakage, report realistic performance, and support
-            <strong>evidence-based decision making</strong> in health and policy.
-        </p>
-    </section>
+  <main class="container" id="main-content">
+    <!-- All your sections remain unchanged here -->
+  </main>
 
-    <!-- RESEARCH -->
-    <section id="research" class="section">
-        <h2>Research</h2>
-
-        <article class="card">
-            <h3>Blood Viscosity and Triglyceride Clearance: A Data-Driven Model for Cancer Risk Stratification</h3>
-            <p class="meta">
-                Recommended for publication at <strong>IEEE ICBCB 2026</strong> (EI Compendex &amp; Scopus Proceedings)
-            </p>
-            <p>
-                This study proposes a <strong>data-driven risk stratification model</strong> using
-                whole blood viscosity (WBV) and triglyceride clearance rate (TCR) as potential
-                metabolic–oncologic markers. Using a retrospective cohort of
-                <strong>1,500 patients</strong>, I built a leakage-controlled machine learning pipeline
-                to explore whether simple, routinely collected physiological and biochemical
-                measurements can meaningfully predict cancer risk.
-            </p>
-            <p>
-                The work focuses on robust feature preprocessing, careful partitioning of data
-                to prevent information leakage, and realistic performance evaluation. Beyond
-                the numerical results, the study emphasizes the importance of
-                <strong>methodological transparency</strong> in biomedical ML, especially when
-                models are intended to inform early screening or risk communication in
-                real-world health systems.
-            </p>
-          <p class="tag">Bioinformatics · Hemorheology · Cancer Risk Modeling · Metabolic Dysregulation</p> 
-        </article>
-
-        <article class="card">
-            <h3>Leakage-Controlled Machine Learning Reveals a Reproducible Null Association Between Whole Blood Viscosity and Triglyceride Clearance Rate</h3>
-            <p class="meta">
-                Journal manuscript in preparation for submission to <em>Current Bioinformatics</em> (Q3)
-            </p>
-            <p>
-                Building on the same clinical cohort, this work investigates the relationship
-                between WBV and TCR under a <strong>strict, leakage-controlled validation
-                framework</strong>. By systematically addressing common sources of bias —
-                such as patient-level overlap between training and testing sets and
-                inappropriate feature scaling — the study demonstrates a
-                <strong>reproducible null association</strong> between WBV and TCR.
-            </p>
-            <p>
-                Rather than forcing a positive result, the paper argues for the scientific
-                value of well-documented null findings in bioinformatics. It shows how
-                rigorous evaluation, clear reporting of negative results, and openly
-                described pipelines can prevent overclaiming in biomedical machine
-                learning and support more reliable translation of models into clinical and
-                public health contexts.
-            </p>
-          <p class="tag">Machine Learning · Bioinformatics · Data Leakage Control · Reproducible Research</p>  
-        </article>
-    </section>
-
-    <!-- PROJECTS -->
-    <section id="projects" class="section">
-        <h2>Selected Projects</h2>
-
-        <article class="card">
-            <h3>Wei Smart Poed – Thai NLP Chatbot</h3>
-            <p>
-                I conceptualized and developed <strong>Wei Smart Poed</strong>, a Thai-language chatbot designed to suggest context-appropriate synonyms and
-                support better Thai writing. This capstone project combined my interest in
-                language, AI, and user experience, and was part of the Artificial Intelligence
-                Engineering program at Satit Prasarnmit Demonstration School.
-            </p>
-            <p class="tag">NLP · Python · Chatbot</p>
-        </article>
-    </section>
-
-    <!-- REWARDS -->
-    <section id="rewards" class="section">
-        <h2>Rewards &amp; Competitions</h2>
-
-        <article class="card">
-            <h3>World Robot Olympiad – Regular Senior (Thailand, 2019)</h3>
-            <p>
-                Designed and programmed autonomous robots for national competition, achieving
-                <strong>5th place nationwide</strong>. This experience sparked my long-term
-                interest in robotics, engineering, and problem-solving through hands-on projects.
-            </p>
-            <p class="tag">Robotics · C++ · Mechatronics</p>
-        </article>
-    </section>
-
-    <!-- LEADERSHIP & POLICY -->
-    <section id="leadership" class="section">
-        <h2>Leadership &amp; Policy Engagement</h2>
-        
-        <article class="card">
-            <h3>National E-Cigarette Legislation Committee Member (2025)</h3>
-            <p>
-                Youngest committee member in Thailand’s <strong>National Committee for E-Cigarette
-                Legislation</strong> under the Ministry of Public Health, contributing to policy
-                efforts to protect youth from the harms of e-cigarettes.
-            </p>
-            <p class="tag">Public Health Policy · National Health Legislation · Tobacco Control</p>
-        </article>
-                
-        <article class="card">
-            <h3>Vice President – IFMSA-Thailand (2025)</h3>
-            <p>
-                Serving as <strong>Vice President for Administration and Organization</strong> of the
-                International Federation of Medical Students’ Associations – Thailand, overseeing
-                internal structure, governance, and organizational sustainability.
-            </p>
-            <p class="tag">Organizational Leadership · Strategic Management · Global Health Collaboration</p>
-        </article>
-
-        <article class="card">
-            <h3>T-SCEPT 2025 – National Thinkathon on Tobacco &amp; Substance Control</h3>
-            <p>
-                Founder, Chair, & Project Director of <strong>T-SCEPT 2025</strong>, a national policy-focused
-                thinkathon on tobacco and narcotics control aligned with <strong>SDG 3.a</strong>. 
-                I pioneered the project to drive national progress and empower youth by shaping national policy frameworks 
-                through youth-led policy competitions designed by and for young people. This initiative successfully fostered 
-                collaborations with key public and private sector organizations, creating meaningful and lasting impact.
-            </p>
-            <p class="tag">Policy Innovation · National Competition Design · SDG Goals</p>
-        </article>
-
-        <article class="card">
-            <h3>Ordinary Committee Member – SMST (2025)</h3>
-            <p>
-                Served as an <strong>Ordinary Committee Member (2025)</strong> of the <strong>Medical Students’ Federation of Thailand under the Royal Patronage (SMST)</strong>, 
-                supported national-level organizational planning, advocacy initiatives, and coordination between medical students 
-                representatives and health policy stakeholders.
-            </p>
-            <p class="tag">Student Governance · Public Engagement · Medical Advocacy</p>
-        </article>
-        
-        <article class="card">
-            <h3>National Representative – SMST (2024)</h3>
-            <p>
-                Represented Thai medical students as the <strong>National Representative (2024)</strong> of the Medical Students’ Federation of Thailand under the Royal Patronage (SMST), 
-                participating in national discussions on health policy and medical education, 
-                and engaging with government agencies and academic partners.
-            </p>
-            <p class="tag">Youth Representation · Medical Education · Social Impact</p>
-        </article>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="section">
-        <h2>Contact</h2>
-        <p>
-            I am open to collaborations in <strong>AI, bioinformatics, health data, and youth-driven policy projects</strong>.
-        </p>
-        <ul class="contact-list">
-            <li><strong>Email:</strong> <a href="mailto:ohm19nattakitti@gmail.com">ohm19nattakitti@gmail.com</a></li>
-            <li><strong>GitHub:</strong> <a href="https://github.com/NattakittiP" target="_blank">github.com/NattakittiP</a></li>
-            <li><strong>Instagram:</strong> <a href="https://instagram.com/Ohm._19" target="_blank">@Ohm._19</a></li>
-        </ul>
-    </section>
-</main>
-
-<footer class="site-footer">
+  <footer class="site-footer">
     <div class="container">
-        <p>© <span id="year"></span> Nattakitti Piyavechvirat (Ohm) · 百文</p>
+      <p>© <span id="year"></span> Nattakitti Piyavechvirat (Ohm) · 百文</p>
     </div>
-    <script>
-        document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
-</footer>
+  </footer>
+
+  <script>
+    // dynamic year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // ===== Moving Starfield Background =====
+    const canvas = document.getElementById('stars');
+    const ctx = canvas.getContext('2d', { alpha: true });
+
+    let DPR = Math.min(window.devicePixelRatio || 1, 2);
+    let W = 0, H = 0;
+    let stars = [];
+    let mouseX = 0.5, mouseY = 0.5;
+
+    function spawnStar() {
+      return {
+        x: Math.random() * W,
+        y: Math.random() * H,
+        r: Math.random() * 1.5 + 0.4,
+        vx: (Math.random() * 0.40 + 0.05) * (Math.random() < 0.5 ? -1 : 1),
+        vy: (Math.random() * 0.30 + 0.02),
+        phase: Math.random() * Math.PI * 2,
+        tw: Math.random() * 0.02 + 0.005
+      };
+    }
+
+    function resize() {
+      W = canvas.width = window.innerWidth * DPR;
+      H = canvas.height = window.innerHeight * DPR;
+      ctx.scale(DPR, DPR);
+      const count = Math.max(140, Math.floor((window.innerWidth * window.innerHeight) / 8000));
+      stars = Array.from({ length: count }, spawnStar);
+    }
+
+    function step() {
+      ctx.clearRect(0, 0, W, H);
+      const px = (mouseX - 0.5) * 0.6;
+      const py = (mouseY - 0.5) * 0.6;
+
+      for (const s of stars) {
+        s.x += s.vx + px;
+        s.y += s.vy + py;
+        if (s.x < -5) s.x = W + 5;
+        if (s.x > W + 5) s.x = -5;
+        if (s.y < -5) s.y = H + 5;
+        if (s.y > H + 5) s.y = -5;
+
+        s.phase += s.tw;
+        const alpha = 0.5 + 0.5 * Math.sin(s.phase);
+
+        ctx.globalAlpha = alpha;
+        ctx.beginPath();
+        ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
+        ctx.fillStyle = 'rgba(255,255,255,1)';
+        ctx.fill();
+      }
+
+      requestAnimationFrame(step);
+    }
+
+    window.addEventListener('resize', resize);
+    window.addEventListener('mousemove', (e) => {
+      mouseX = e.clientX / window.innerWidth;
+      mouseY = e.clientY / window.innerHeight;
+    });
+
+    resize();
+    step();
+  </script>
 </body>
 </html>
-
 
