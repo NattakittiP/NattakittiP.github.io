@@ -92,7 +92,7 @@
 
         /* Header / Hero */
         .site-header {
-            position: sticky; top: 0; z-index: 20;
+            position: static; z-index: 20;
             backdrop-filter: saturate(140%) blur(10px);
             background: linear-gradient(135deg, rgba(26,23,56,0.85) 0%, rgba(11,16,32,0.85) 55%, rgba(5,7,20,0.9) 100%);
             border-bottom: 1px solid rgba(210,180,100,0.25);
@@ -212,7 +212,7 @@
         #progress{position:fixed;left:0;top:0;height:4px;width:0;background:linear-gradient(90deg,#d2b464,#fff8e1);z-index:30;box-shadow:0 0 12px rgba(210,180,100,.8)}
 
         /* hero flare behind avatar */
-        .profile-block::after{content:"";position:absolute;inset:-12px;-webkit-mask:radial-gradient(circle at center, #000 35%, transparent 40%);mask:radial-gradient(circle at center, #000 35%, transparent 40%);background:radial-gradient(120px 120px at 50% 50%,rgba(210,180,100,.45),rgba(210,180,100,0));filter:blur(8px);opacity:.9;pointer-events:none}
+        .profile-block::after{display:none;} 
 
         /* section headings underline glow */
         .section h2{position:relative;padding-bottom:6px}
@@ -242,7 +242,7 @@
         @keyframes kanokMove{0%{transform:translate3d(-5%, -3%, 0) rotate(0deg)}100%{transform:translate3d(5%, 3%, 0) rotate(360deg)}}
 
         /* Ribbon canvas (gold bezier ribbons) */
-        #ribbons{position:fixed;inset:0;z-index:-1;opacity:.35;}
+        #ribbons{display:none;} 
 
         /* LEFT ICON TIMELINE */
         .timeline{position:fixed;left:24px;top:120px;z-index:25;display:flex;flex-direction:column;gap:14px;align-items:center}
@@ -250,7 +250,7 @@
         .timeline a{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:rgba(26,23,56,.65);border:1px solid rgba(210,180,100,.5);box-shadow:0 10px 20px rgba(0,0,0,.35), inset 0 0 0 1px rgba(255,255,255,.04);transition:transform .2s ease, box-shadow .2s ease, background .2s ease}
         .timeline a:hover{transform:translateY(-2px) scale(1.04);box-shadow:0 16px 28px rgba(0,0,0,.45),0 0 0 6px rgba(210,180,100,.08)}
         .timeline a svg{width:22px;height:22px;fill:#d2b464}
-        .timeline a.active{background:rgba(210,180,100,.12)}
+        .timeline a.active{background:rgba(210,180,100,.22);border-color:#d2b464;box-shadow:0 0 0 6px rgba(210,180,100,.10),0 10px 24px rgba(0,0,0,.45);} 
         @media(max-width:900px){.timeline{display:none}}
 
         /* Section intro crowns (non-text decorative) */
@@ -263,8 +263,8 @@
     
         /* ULTRA MAX DELUXE – EVERYTHING ON */
         /* 3D ring around avatar */
-        .avatar-ring{position:absolute;inset:-18px;z-index:-1;pointer-events:none;}
-        .avatar-ring svg{width:160px;height:160px;filter:drop-shadow(0 0 16px rgba(210,180,100,.45));animation:ringSpin 24s linear infinite}
+        .avatar-ring{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:140px;height:140px;pointer-events:none;z-index:0;} 
+        .avatar-ring svg{width:140px;height:140px;filter:none;animation:ringSpin 24s linear infinite} 
         @keyframes ringSpin{to{transform:rotate(360deg)}}
 
         /* particles overlay */
@@ -291,6 +291,9 @@
         /* back-to-top show on scroll */
         .quick .top{opacity:0;transform:translateY(6px);}
         .quick .top.show{opacity:1;transform:none}
+    
+        /* Force active icon to gold */
+        .timeline a.active svg{fill:#d2b464}
     </style>
 </head>
 <body>
@@ -794,5 +797,4 @@
 </script>
 </body>
 </html>
-
 
