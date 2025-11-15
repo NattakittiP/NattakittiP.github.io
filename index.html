@@ -180,24 +180,23 @@
             padding-left: 0; /* ไม่มีเส้นยาว */
         }
 
-        .timeline-item {
-    position: relative;
-    margin-bottom: 32px;  /* ช่องว่างระหว่างกล่องแต่ละอัน */
-}
+      .timeline-item {
+            position: relative;
+            margin-bottom: 40px; /* ช่องว่างระหว่างกล่อง */
+        }
 
-.timeline-dot {
-    position: absolute;
-    left: -22px;              /* ระยะห่างจากกล่อง  ให้ตรงกับที่ใช้ตอนนี้ */
-    top: 50%;
-    transform: translateY(-50%);
-
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background: #050714;
-    border: 2px solid var(--accent);
-    box-shadow: 0 0 0 3px rgba(210, 180, 100, 0.18);
-}
+        .timeline-dot {
+            position: absolute;
+            left: -22px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #050714;
+            border: 2px solid var(--accent);
+            box-shadow: 0 0 0 3px rgba(210, 180, 100, 0.18);
+        }
 
 
         .timeline-content {
@@ -215,19 +214,16 @@
             margin-bottom: 4px;
             display: inline-block;
         }
-/* เส้นเชื่อมจาก dot ของกล่องนี้ ไปหากล่องถัดไป */
         .timeline-item::after {
             content: "";
             position: absolute;
-            left: -16px;                     /* ให้อยู่กลาง dot ( -22 + 6 ) */
-            top: calc(50% + 18px);           /* เริ่มเส้น "ใต้กล่อง" เล็กน้อย */
-            bottom: -18px;                   /* ไปจบในช่องว่าง ก่อนถึงกล่องถัดไป */
-
+            left: -16px;  
+            top: calc(50% + 20px);
+            height: calc(40px - 20px);
             width: 2px;
             background: rgba(210, 180, 100, 0.35);
         }
-
-/* อันสุดท้ายไม่ต้องมีเส้นต่อ */
+        
         .timeline-item:last-child::after {
             display: none;
         }
@@ -598,6 +594,7 @@
 </footer>
 </body>
 </html>
+
 
 
 
