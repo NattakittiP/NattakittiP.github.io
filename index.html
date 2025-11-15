@@ -188,13 +188,14 @@
 
         .timeline-dot {
             position: absolute;
-            left: -18px;       /* ระยะห่างจากกล่อง */
-            top: 18px;         /* ชี้ตำแหน่งให้ตรง "กลางบรรทัดแรก" */
-    
-            width: 11px;
-            height: 11px;
+            left: -22px;       /* ระยะห่างจุดออกจากกล่อง */
+            top: 50%;          /* ชี้ให้จุดอยู่กึ่งกลางกล่อง */
+            transform: translateY(-50%); /* เลื่อนขึ้นครึ่งหนึ่งเพื่อให้พอดี */
+
+            width: 12px;
+            height: 12px;
             border-radius: 50%;
-    
+
             background: #050714;
             border: 2px solid var(--accent);
             box-shadow: 0 0 0 3px rgba(210, 180, 100, 0.18);
@@ -395,7 +396,7 @@
                         and health data science</strong>. 
                         
                         I researched the relationship between whole blood viscosity and triglyceride clearance, 
-                        a study that has been selected for oral presentation and publication at <strong>IEEE ICBCB 2026</strong> (indexed in EI Compendex and Scopus).
+                        a study that has been selected for oral presentation and publication at <strong>IEEE ICBCB 2026</strong>.<br>
                         In addition, I am preparing another manuscript, an extended and more rigorous analysis for submission to <strong>Current Bioinformatics (Q3)</strong>, 
                         which further develops the original work through a fully leakage-controlled machine learning framework to ensure methodological transparency and reproducible bioinformatics analysis.
                     </p>
@@ -580,6 +581,7 @@
 </footer>
 </body>
 </html>
+
 
 
 
