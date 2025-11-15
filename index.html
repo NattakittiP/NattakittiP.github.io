@@ -185,18 +185,7 @@
             margin-bottom: 40px; /* ช่องว่างระหว่างกล่อง */
         }
 
-        .timeline-dot {
-            position: absolute;
-            left: -22px;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: #050714;
-            border: 2px solid var(--accent);
-            box-shadow: 0 0 0 3px rgba(210, 180, 100, 0.18);
-        }
+        
 
 
         .timeline-content {
@@ -214,19 +203,7 @@
             margin-bottom: 4px;
             display: inline-block;
         }
-        .timeline-item::after {
-            content: "";
-            position: absolute;
-            left: -16px; /* กึ่งกลาง dot ( -22 + 6 ) */
-            top: calc(50% + 14px); /* เริ่มใต้ dot บนพอดี */
-            height: calc(52px); /* ไปถึงกึ่งกลาง dot ถัดไปพอดี */
-            width: 2px;
-            background: rgba(210, 180, 100, 0.35);
-        }
-        
-        .timeline-item:last-child::after {
-            display: none;
-        }
+
 
 
         @media (max-width: 640px) {
@@ -594,6 +571,7 @@
 </footer>
 </body>
 </html>
+
 
 
 
