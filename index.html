@@ -174,6 +174,68 @@
             color: var(--muted);
             margin-top: 4px;
         }
+        
+        .timeline {
+            position: relative;
+            margin-top: 12px;
+            padding-left: 18px;
+            border-left: 1.5px solid rgba(210, 180, 100, 0.45);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 16px;
+            padding-left: 14px;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: -8px;
+            top: 6px;
+            width: 12px;
+            height: 12px;
+            border-radius: 999px;
+            background: #050714;
+            border: 2px solid var(--accent);
+            box-shadow: 0 0 0 3px rgba(210, 180, 100, 0.18);
+        }
+
+        .timeline-content {
+            padding: 10px 12px;
+            border-radius: 11px;
+            background: radial-gradient(circle at top left, rgba(210,180,100,0.12), rgba(15,17,33,0.96));
+            border: 1px solid rgba(210, 180, 100, 0.22);
+        }
+
+        .timeline-year {
+            font-size: 0.8rem;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin-bottom: 2px;
+            display: inline-block;
+        }
+
+        .timeline-content h3 {
+            font-size: 0.98rem;
+            margin-bottom: 4px;
+        }
+
+        .timeline-content p {
+            font-size: 0.9rem;
+            margin-bottom: 0;
+            color: #e5e7f0;
+        }
+
+        @media (max-width: 640px) {
+            .timeline {
+                padding-left: 14px;
+            }
+
+            .timeline-content {
+                padding: 9px 10px;
+            }
+        }
 
         .contact-list {
             list-style: none;
@@ -239,6 +301,7 @@
             </p>
             <nav class="main-nav">
                 <a href="#about">About</a>
+                <a href="#timeline">Timeline</a>
                 <a href="#research">Research</a>
                 <a href="#projects">Projects</a>
                 <a href="#rewards">Rewards &amp; Competitions</a>
@@ -281,6 +344,68 @@
             that avoid data leakage, report realistic performance, and support
             <strong>evidence-based decision making</strong> in health and policy.
         </p>
+            <!-- TIMELINE -->
+    <section id="timeline" class="section">
+        <h2>Timeline</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-year">2019</span>
+                    <h3>Robotics &amp; National Competition</h3>
+                    <p>
+                        Competed in the <strong>World Robot Olympiad – Regular Senior (Thailand)</strong>,
+                        designing and programming autonomous robots and achieving
+                        <strong>5th place nationwide</strong>. This experience sparked my long-term
+                        interest in robotics, engineering, and technical problem-solving.
+                    </p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-year">2022</span>
+                    <h3>Artificial Intelligence Engineering &amp; Thai NLP</h3>
+                    <p>
+                        Studied <strong>Artificial Intelligence Engineering</strong> at Satit Prasarnmit Demonstration School
+                        and developed <strong>Wei Smart Poed</strong>, a Thai-language NLP chatbot that suggests
+                        context-appropriate synonyms to support better Thai writing.
+                    </p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-year">2023–2024</span>
+                    <h3>Medical Studies &amp; Shift in Perspective</h3>
+                    <p>
+                        Studied medicine for two years at <strong>Rangsit University</strong>, gaining clinical and
+                        biomedical foundations. During this time, I realized my passion lies in understanding
+                        health systems through <strong>data, logic, and algorithms</strong> rather than clinical practice alone.
+                    </p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-year">2025–Present</span>
+                    <h3>Informatics, Research &amp; Policy Engagement</h3>
+                    <p>
+                        Joined the <strong>International Bachelor Program in Informatics (IBPI)</strong> at
+                        <strong>Yuan Ze University</strong>, focusing on <strong>bioinformatics, machine learning validation, and
+                        health data science</strong>. As a first author, I led research on whole blood viscosity and triglyceride
+                        clearance, with one paper selected for <strong>IEEE ICBCB 2026</strong> and another prepared for
+                        <em>Current Bioinformatics</em>, while also serving in <strong>national health policy roles</strong> and founding
+                        the <strong>T-SCEPT 2025</strong> youth policy thinkathon.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     </section>
 
     <!-- RESEARCH -->
@@ -458,6 +583,7 @@
 </footer>
 </body>
 </html>
+
 
 
 
