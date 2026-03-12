@@ -545,32 +545,6 @@
 
 
         <h3 class="subsection-title">Under Peer Review</h3>
-        
-        <article class="card">
-            <h3>Leakage-Controlled Machine Learning Reveals a Reproducible Null Association Between Whole Blood Viscosity and Triglyceride Clearance Rate (2025)</h3>
-            <p class="meta">
-                The Journal manuscript has been submitted to <strong>Current Bioinformatics (Bentham Science, Q3)</strong> and is presently undergoing peer review<br>
-                Supervised by Dr. Qazi Mazhar ul Haq (Assistant Professor, Department of Computer Science and Engineering, Yuan Ze University)
-            </p>
-            <p>
-                Building on the same clinical cohort, this work investigates the relationship
-                between WBV and TCR under a <strong>strict, leakage-controlled validation
-                framework</strong>. By systematically addressing common sources of bias —
-                such as patient-level overlap between training and testing sets and
-                inappropriate feature scaling — the study demonstrates a
-                <strong>reproducible null association</strong> between WBV and TCR.
-            </p>
-            <p>
-                Rather than forcing a positive result, the paper argues for the scientific
-                value of well-documented null findings in bioinformatics. It shows how
-                rigorous evaluation, clear reporting of negative results, and openly
-                described pipelines can prevent overclaiming in biomedical machine
-                learning and support more reliable translation of models into clinical and
-                public health contexts.
-            </p>
-          <p class="tag">Machine Learning · Bioinformatics · Data Leakage Control · Reproducible Research</p>
-            <p>GitHub Repository: <a href="https://github.com/NattakittiP/WBV-TCR-ML-Study" target="_blank">github.com/NattakittiP/WBV-TCR-ML-Study</a></p>
-        </article>
 
         <article class="card">
     <h3> A Leakage-Controlled Machine Learning Framework for Postprandial Triglyceride Phenotyping Using Synthetic Clinical Data (2025)</h3>
@@ -811,6 +785,62 @@ A Controlled Study on MIMIC-IV Demo and Full Releases (2026)
 
     <p>GitHub Repository:</strong> <a href="https://github.com/NattakittiP/Protocol_Audit" target="_blank">github.com/NattakittiP/Protocol_Audit</a></p>
 </article>
+
+        <article class="card">
+  <h3>
+   Protocol-Level Auditing for Reliable Clinical Machine Learning Evaluation (2026)
+  </h3>
+
+  <p class="meta">
+    The Journal manuscript has been submitted to 
+        <strong>IEEE Journal of Biomedical and Health Informatics (IEEE, Q1)</strong> and is presently undergoing peer review<br>
+        Supervised by Dr. Qazi Mazhar ul Haq
+        (Assistant Professor, Department of Computer Science and Engineering, Yuan Ze University)
+        and Dr. Yi-Jheng Huang (Associate Professor, Director of International Bachelor Program in Informatics, Yuan Ze University)
+  </p>
+
+  <p>
+This work introduces a <strong>protocol-level audit framework</strong> for assessing the
+<strong>reliability of model evaluation and model selection</strong> in clinical machine learning.
+Rather than proposing a new predictor, the study examines how seemingly minor evaluation
+decisions—such as <strong>data splitting policy</strong>, <strong>preprocessing placement</strong>,
+and the ordering of <strong>hyperparameter tuning and probability calibration</strong>—
+can systematically change reported performance and even alter the identity of the selected
+“best” model.
+</p>
+
+<p>
+Evaluation reliability is operationalized through a
+<strong>locked audit matrix of leakage-explicit protocol variants (P0–P3)</strong>,
+contrasting a strict fold-safe pipeline with controlled protocol deviations that emulate
+common methodological errors. The framework is evaluated across
+<strong>three complementary cohorts</strong>—a real ICU mortality cohort from
+<strong>MIMIC-IV</strong>, a <strong>synthetic physiologic dataset</strong> for controlled stress testing,
+and an external multi-centre ICU cohort from <strong>eICU</strong> with
+<strong>leakage-guarded feature hygiene</strong>. Five representative model families are assessed
+using nested cross-validation, calibration-aware training, and deterministic experiment logging.
+</p>
+
+<p>
+Beyond conventional performance metrics, the study treats
+<strong>ranking stability as a primary evaluation objective</strong>,
+introducing diagnostics such as <strong>winner flip percentage</strong>,
+<strong>rank-correlation analysis</strong>, and <strong>top-2 margin inspection</strong>,
+along with stress tests under <strong>missingness</strong> and
+<strong>label-prevalence shift</strong>. Results show that model rankings and winner identity
+can change under protocol variation and realistic data perturbations, with many reversals
+arising in <strong>near-tie performance regimes</strong>. By reframing evaluation as an auditable,
+stress-testable process, the work provides a <strong>reproducible and leakage-aware framework</strong>
+for more trustworthy comparative evaluation in biomedical machine learning.
+</p>
+
+  <p class="tag">
+    Biomedical Machine Learning · Protocol Audit · Ranking Stability · Data Leakage · Robust Evaluation · Clinical AI
+  </p>
+
+
+    <p>GitHub Repository:</strong> <a href="https://github.com/NattakittiP/Full_PHASE_Audit_Protocal" target="_blank">github.com/NattakittiP/Full_PHASE_Audit_Protocal</a></p>
+</article>
         
  <h3 class="subsection-title">In Preparation</h3>
 
@@ -868,6 +898,32 @@ A Controlled Study on MIMIC-IV Demo and Full Releases (2026)
     </p>
     <p>GitHub Repository: <a href="https://github.com/NattakittiP/visibility_aware_readability" target="_blank">github.com/NattakittiP/visibility_aware_readability</a></p>
 </article>
+
+         <article class="card">
+            <h3>Leakage-Controlled Machine Learning Reveals a Reproducible Null Association Between Whole Blood Viscosity and Triglyceride Clearance Rate </h3>
+            <p class="meta">
+                 Journal manuscript under preparation for submission<br>
+                Supervised by Dr. Qazi Mazhar ul Haq (Assistant Professor, Department of Computer Science and Engineering, Yuan Ze University)
+            </p>
+            <p>
+                Building on the same clinical cohort, this work investigates the relationship
+                between WBV and TCR under a <strong>strict, leakage-controlled validation
+                framework</strong>. By systematically addressing common sources of bias —
+                such as patient-level overlap between training and testing sets and
+                inappropriate feature scaling — the study demonstrates a
+                <strong>reproducible null association</strong> between WBV and TCR.
+            </p>
+            <p>
+                Rather than forcing a positive result, the paper argues for the scientific
+                value of well-documented null findings in bioinformatics. It shows how
+                rigorous evaluation, clear reporting of negative results, and openly
+                described pipelines can prevent overclaiming in biomedical machine
+                learning and support more reliable translation of models into clinical and
+                public health contexts.
+            </p>
+          <p class="tag">Machine Learning · Bioinformatics · Data Leakage Control · Reproducible Research</p>
+            <p>GitHub Repository: <a href="https://github.com/NattakittiP/WBV-TCR-ML-Study" target="_blank">github.com/NattakittiP/WBV-TCR-ML-Study</a></p>
+        </article>
 
 
     </section>
@@ -1000,6 +1056,7 @@ A Controlled Study on MIMIC-IV Demo and Full Releases (2026)
 </footer>
 </body>
 </html>
+
 
 
 
