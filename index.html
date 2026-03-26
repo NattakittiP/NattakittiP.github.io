@@ -639,59 +639,6 @@ A Controlled Study on MIMIC-IV Demo and Full Releases (2026)
 
         <article class="card">
   <h3>
-    Ranking Instability Under Latent Evaluation Shifts:
-    Integrity-Aware Model Selection Beyond Leaderboards (2026)
-  </h3>
-
-  <p class="meta">
-    The conference manuscript has been submitted to 
-    <strong>International Conference on Machine Learning (ICML 2026)</strong>
-  </p>
-
-  <p>
-    This work studies <strong>comparative evaluation failure</strong> in model selection:
-    even when multiple models achieve near-ceiling discrimination in one plausible evaluation environment,
-    their <strong>relative ordering (rankings) can systematically reverse</strong> under subtle, under-specified changes
-    such as dataset editions, labeling policies, cohort rules, and split protocols—termed
-    <strong>latent evaluation shifts</strong>.
-  </p>
-
-  <p>
-    Using controlled multi-environment evaluations, the study demonstrates that
-    <strong>near-perfect AUROC (≈ 0.998) on the MIMIC-IV full release can coexist with large ranking divergence</strong>
-    when switching to the official MIMIC-IV demo release (AUROC ≈ 0.60–0.75),
-    with <strong>~60% of model pairs reversing their ordering</strong>.
-    Extensive audits (e.g., leakage hardening, split checks, and sensitivity analyses) indicate the effect is
-    <strong>structural</strong> rather than random noise.
-  </p>
-
-  <p>
-    The work introduces <strong>STABLE-MERGE</strong>, an integrity-aware selection framework that:<br>
-    (1) formalizes ranking instability via <strong>pairwise preference flips</strong>, global flip rate, and model-level
-    <strong>flip involvement (FlipInv)</strong><br>
-    (2) connects ranking fragility to deployment consequences via <strong>Winner’s Regret</strong> under environment transfer<br>
-    (3) performs selection by enforcing <strong>joint constraints on calibration error (ECE)</strong> and
-    <strong>ranking stability (FlipInv)</strong>.
-  </p>
-
-  <p>
-    Crucially, STABLE-MERGE can <strong>explicitly certify infeasibility</strong> when no candidate satisfies minimum integrity
-    requirements (calibration + stability), and then returns a <strong>flagged minimax-regret fallback</strong> to reduce
-    worst-case deployment loss under environment uncertainty, making fragility transparent rather than
-    forcing a potentially non-transferable “leaderboard winner.”
-  </p>
-
-  <p class="tag">
-    Model Selection · Evaluation Stability · Dataset Editions · Calibration · Deployment Risk · Robust Comparative Evaluation
-  </p>
-
-  <p>
-    <strong>GitHub Repository:</strong> TBA
-  </p>
-</article>
-
-        <article class="card">
-  <h3>
     Protocol-Level Auditing of Machine Learning Evaluation:
     Disentangling Split Policy, Leakage, and Decision Stability (2026)
   </h3>
@@ -955,6 +902,58 @@ for more trustworthy comparative evaluation in biomedical machine learning.
     <p class="tag">AI · Computer Vision · Exam Proctoring </p>
     <p>GitHub Repository: <a href="https://github.com/NattakittiP/Proctify_Project" target="_blank">github.com/NattakittiP/Proctify_Project</a></p>
     <p>Report: <a href=" https://drive.google.com/file/d/12JjKDmEDL8pBUlL_cLO5MJCI96Rc_5vJ/view?usp=sharing" target="_blank">Final Report Project</a></p>
+</article>
+         <article class="card">
+  <h3>
+    Ranking Instability Under Latent Evaluation Shifts:
+    Integrity-Aware Model Selection Beyond Leaderboards (2026)
+  </h3>
+
+  <p class="meta">
+    The conference manuscript has been submitted to 
+    <strong>the Fortieth Annual Conference on Neural Information Processing Systems (NeurIPS 2026)</strong>
+  </p>
+
+  <p>
+    This work studies <strong>comparative evaluation failure</strong> in model selection:
+    even when multiple models achieve near-ceiling discrimination in one plausible evaluation environment,
+    their <strong>relative ordering (rankings) can systematically reverse</strong> under subtle, under-specified changes
+    such as dataset editions, labeling policies, cohort rules, and split protocols—termed
+    <strong>latent evaluation shifts</strong>.
+  </p>
+
+  <p>
+    Using controlled multi-environment evaluations, the study demonstrates that
+    <strong>near-perfect AUROC (≈ 0.998) on the MIMIC-IV full release can coexist with large ranking divergence</strong>
+    when switching to the official MIMIC-IV demo release (AUROC ≈ 0.60–0.75),
+    with <strong>~60% of model pairs reversing their ordering</strong>.
+    Extensive audits (e.g., leakage hardening, split checks, and sensitivity analyses) indicate the effect is
+    <strong>structural</strong> rather than random noise.
+  </p>
+
+  <p>
+    The work introduces <strong>STABLE-MERGE</strong>, an integrity-aware selection framework that:<br>
+    (1) formalizes ranking instability via <strong>pairwise preference flips</strong>, global flip rate, and model-level
+    <strong>flip involvement (FlipInv)</strong><br>
+    (2) connects ranking fragility to deployment consequences via <strong>Winner’s Regret</strong> under environment transfer<br>
+    (3) performs selection by enforcing <strong>joint constraints on calibration error (ECE)</strong> and
+    <strong>ranking stability (FlipInv)</strong>.
+  </p>
+
+  <p>
+    Crucially, STABLE-MERGE can <strong>explicitly certify infeasibility</strong> when no candidate satisfies minimum integrity
+    requirements (calibration + stability), and then returns a <strong>flagged minimax-regret fallback</strong> to reduce
+    worst-case deployment loss under environment uncertainty, making fragility transparent rather than
+    forcing a potentially non-transferable “leaderboard winner.”
+  </p>
+
+  <p class="tag">
+    Model Selection · Evaluation Stability · Dataset Editions · Calibration · Deployment Risk · Robust Comparative Evaluation
+  </p>
+
+  <p>
+    <strong>GitHub Repository:</strong> TBA
+  </p>
 </article>
 
     <!-- REWARDS -->
