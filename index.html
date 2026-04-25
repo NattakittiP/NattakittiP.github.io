@@ -537,6 +537,62 @@
      <p>GitHub Repository: <a href="https://github.com/NattakittiP/visibility_demo_version" target="_blank">github.com/NattakittiP/visibility_demo_version</a></p>
 </article>
 
+        <article class="card">
+  <h3>
+    Protocol-Level Auditing of Machine Learning Evaluation:
+    Disentangling Split Policy, Leakage, and Decision Stability (2026)
+  </h3>
+
+  <p class="meta">
+     Accepted after <strong>double-blind peer review</strong> and selected for publication and oral presentation at<br> 
+        <strong>The 23rd The International Joint Conference on Computer Science and Software Engineering (JCSSE 2026)</strong> <br>
+        Supervised by Dr. Qazi Mazhar ul Haq (Assistant Professor, Department of Computer Science and Engineering, Yuan Ze University)
+  </p>
+
+  <p>
+    This work argues that <strong>seed-based reproducibility is not equivalent to protocol validity</strong>:
+    stable cross-validation metrics across random seeds can still occur under flawed or poorly specified
+    evaluation designs. To address this, the study proposes a <strong>protocol-level audit framework</strong>
+    that systematically separates three often-confounded factors in empirical ML studies:
+    <strong>split policy</strong>, <strong>leakage protocol</strong>, and <strong>model family</strong>.
+  </p>
+
+  <p>
+    The paper constructs an explicit <strong>audit matrix</strong> spanning
+    two outer split strategies (<strong>StratifiedKFold</strong> vs. <strong>GroupKFold</strong>),
+    four leakage variants (<strong>P0–P3</strong>, from strictly fold-safe nested CV with
+    <strong>calibration-before-tuning</strong> to progressively violated settings),
+    and five model families (L2-Logistic Regression, Linear SVM, Random Forest, XGBoost, ExtraTrees).
+    Model selection is performed via a <strong>predefined lexicographic rule</strong>
+    (<strong>AUROC → AP → Brier</strong>) to avoid metric cherry-picking.
+  </p>
+
+  <p>
+    To align evaluation with real decision-making, the study introduces
+    <strong>winner flip percentage</strong> as a decision-level stability metric, quantifying how often the
+    <strong>selected winner model</strong> changes under seed perturbations (20 independent seeds).
+    Across <strong>260 configurations</strong> and <strong>1,300 outer-fold evaluations</strong>,
+    the winner identity remains <strong>invariant</strong> (XGBoost) across split policies,
+    leakage variants, and seed sweeps, while still revealing that
+    <strong>split policy induces measurable performance shifts</strong> and that
+    <strong>leakage effects are configuration-dependent (not uniformly inflationary)</strong>.
+  </p>
+
+  <p>
+    A <strong>synthetic control experiment</strong> further validates pipeline coherence:
+    injecting <strong>15% MCAR missingness</strong> yields a clear degradation signal whose magnitude
+    exceeds protocol-induced shifts, reinforcing that data-quality effects can dominate protocol choices
+    even when the selected winner remains unchanged.
+  </p>
+
+  <p class="tag">
+    Model Evaluation · Reproducibility · Data Leakage · Cross-Validation · Split Policy · Decision Stability · Protocol Audit
+  </p>
+
+
+    <p>GitHub Repository:</strong> <a href="https://github.com/NattakittiP/Protocol_Audit" target="_blank">github.com/NattakittiP/Protocol_Audit</a></p>
+</article>
+
        <h4 class="subsection-title">Journal Paper</h4>
 
         <article class="card">
@@ -678,62 +734,6 @@ A Controlled Study on MIMIC-IV Demo and Full Releases (2026)
         Decision-Level Metrics · Reproducibility
     </p>
     <p>GitHub Repository:</strong> <a href="https://github.com/NattakittiP/mimic-iv-dataset-edition-audit" target="_blank">github.com/NattakittiP/mimic-iv-dataset-edition-audit</a></p>
-</article>
-
-        <article class="card">
-  <h3>
-    Protocol-Level Auditing of Machine Learning Evaluation:
-    Disentangling Split Policy, Leakage, and Decision Stability (2026)
-  </h3>
-
-  <p class="meta">
-    Conference manuscript has been submitted to 
-        <strong>The 23rd The International Joint Conference on Computer Science and Software Engineering (JCSSE 2026)</strong> and is presently undergoing peer review<br>
-        Supervised by Dr. Qazi Mazhar ul Haq (Assistant Professor, Department of Computer Science and Engineering, Yuan Ze University)
-  </p>
-
-  <p>
-    This work argues that <strong>seed-based reproducibility is not equivalent to protocol validity</strong>:
-    stable cross-validation metrics across random seeds can still occur under flawed or poorly specified
-    evaluation designs. To address this, the study proposes a <strong>protocol-level audit framework</strong>
-    that systematically separates three often-confounded factors in empirical ML studies:
-    <strong>split policy</strong>, <strong>leakage protocol</strong>, and <strong>model family</strong>.
-  </p>
-
-  <p>
-    The paper constructs an explicit <strong>audit matrix</strong> spanning
-    two outer split strategies (<strong>StratifiedKFold</strong> vs. <strong>GroupKFold</strong>),
-    four leakage variants (<strong>P0–P3</strong>, from strictly fold-safe nested CV with
-    <strong>calibration-before-tuning</strong> to progressively violated settings),
-    and five model families (L2-Logistic Regression, Linear SVM, Random Forest, XGBoost, ExtraTrees).
-    Model selection is performed via a <strong>predefined lexicographic rule</strong>
-    (<strong>AUROC → AP → Brier</strong>) to avoid metric cherry-picking.
-  </p>
-
-  <p>
-    To align evaluation with real decision-making, the study introduces
-    <strong>winner flip percentage</strong> as a decision-level stability metric, quantifying how often the
-    <strong>selected winner model</strong> changes under seed perturbations (20 independent seeds).
-    Across <strong>260 configurations</strong> and <strong>1,300 outer-fold evaluations</strong>,
-    the winner identity remains <strong>invariant</strong> (XGBoost) across split policies,
-    leakage variants, and seed sweeps, while still revealing that
-    <strong>split policy induces measurable performance shifts</strong> and that
-    <strong>leakage effects are configuration-dependent (not uniformly inflationary)</strong>.
-  </p>
-
-  <p>
-    A <strong>synthetic control experiment</strong> further validates pipeline coherence:
-    injecting <strong>15% MCAR missingness</strong> yields a clear degradation signal whose magnitude
-    exceeds protocol-induced shifts, reinforcing that data-quality effects can dominate protocol choices
-    even when the selected winner remains unchanged.
-  </p>
-
-  <p class="tag">
-    Model Evaluation · Reproducibility · Data Leakage · Cross-Validation · Split Policy · Decision Stability · Protocol Audit
-  </p>
-
-
-    <p>GitHub Repository:</strong> <a href="https://github.com/NattakittiP/Protocol_Audit" target="_blank">github.com/NattakittiP/Protocol_Audit</a></p>
 </article>
 
         <article class="card">
