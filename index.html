@@ -432,39 +432,8 @@
         <h2>Research - First Author</h2>
           <h3 class="subsection-title">Accepted & Publication</h3>
             <h4 class="subsection-title">Conference Paper</h4>
+
         <article class="card">
-    <h3>Whole Blood Viscosity and Triglyceride Clearance: An Association Analysis Relevant to Cancer Risk (2025)</h3>
-    <p class="meta">
-        Accepted after <strong>triple-blind peer review</strong> and selected for publication and oral presentation at
-        <strong>IEEE ICBCB 2026</strong><br> (EI Compendex &amp; Scopus Proceedings)<br>
-        <strong>2026 14th International Conference on Bioinformatics and Computational Biology</strong><br>
-        Supervised by Dr. Qazi Mazhar ul Haq (Assistant Professor, Department of Computer Science and Engineering, Yuan Ze University)
-    </p>
-
-    <p>
-        This study proposes a <strong>data-driven risk stratification framework</strong> using
-        whole blood viscosity (WBV) and triglyceride clearance rate (TCR) as potential
-        metabolic–oncologic markers. Using a retrospective cohort of
-        <strong>1,500 patients</strong>, I developed a leakage-controlled machine learning pipeline
-        to examine whether routinely collected physiological and biochemical measurements
-        can meaningfully capture cancer-related risk signals.
-    </p>
-
-    <p>
-        The work emphasizes robust feature preprocessing, strict data partitioning to
-        prevent information leakage, and realistic performance evaluation. Beyond
-        predictive performance, the study highlights the importance of
-        <strong>methodological transparency</strong> in biomedical machine learning, particularly
-        when models are intended to support early screening or risk communication in
-        real-world healthcare settings.
-    </p>
-
-    <p class="tag">
-        Bioinformatics · Hemorheology · Cancer Risk Modeling · Metabolic Dysregulation
-    </p>
-</article>
-        
-       <article class="card">
     <h3>Machine Learning–Based Modeling of Postprandial Triglyceride Response (2025)</h3>
     <p class="meta">
         Originally accepted after <strong>triple-blind peer review</strong> at <strong>IEEE ICIIP 2026</strong>,  
@@ -497,6 +466,38 @@
     <p>GitHub Repository: <a href="https://github.com/NattakittiP/TG4h_Predict" target="_blank">github.com/NattakittiP/TG4h_Predict</a></p>
     <p>DOI: 10.1109/ISCBI69404.2026.11495924</p>
     <p>Full Paper: <a href="https://ieeexplore.ieee.org/document/11495924" target="_blank">link</a></p>
+</article>
+        
+        <article class="card">
+    <h3>Whole Blood Viscosity and Triglyceride Clearance: An Association Analysis Relevant to Cancer Risk (2025)</h3>
+    <p class="meta">
+        Accepted after <strong>triple-blind peer review</strong> and selected for publication and oral presentation at
+        <strong>IEEE ICBCB 2026</strong><br> (EI Compendex &amp; Scopus Proceedings)<br>
+        <strong>2026 14th International Conference on Bioinformatics and Computational Biology</strong><br>
+        Supervised by Dr. Qazi Mazhar ul Haq (Assistant Professor, Department of Computer Science and Engineering, Yuan Ze University)
+    </p>
+
+    <p>
+        This study proposes a <strong>data-driven risk stratification framework</strong> using
+        whole blood viscosity (WBV) and triglyceride clearance rate (TCR) as potential
+        metabolic–oncologic markers. Using a retrospective cohort of
+        <strong>1,500 patients</strong>, I developed a leakage-controlled machine learning pipeline
+        to examine whether routinely collected physiological and biochemical measurements
+        can meaningfully capture cancer-related risk signals.
+    </p>
+
+    <p>
+        The work emphasizes robust feature preprocessing, strict data partitioning to
+        prevent information leakage, and realistic performance evaluation. Beyond
+        predictive performance, the study highlights the importance of
+        <strong>methodological transparency</strong> in biomedical machine learning, particularly
+        when models are intended to support early screening or risk communication in
+        real-world healthcare settings.
+    </p>
+
+    <p class="tag">
+        Bioinformatics · Hemorheology · Cancer Risk Modeling · Metabolic Dysregulation
+    </p>
 </article>
 
         <article class="card">
@@ -845,6 +846,47 @@ for more trustworthy comparative evaluation in biomedical machine learning.
   <p>
     <strong>GitHub Repository:</strong> TBA
   </p>
+</article>
+
+                <article class="card">
+    <h3> Missingness Mechanism Matters: Auditing Clinical Model Selection Stability Under MCAR, MAR, and MNAR Perturbations (2026) </h3>
+
+    <p class="meta">
+        Currently <strong>under review</strong> at<br> 
+        <strong>The International Bhurban Conference on Applied Sciences &amp; Technology 2026 (IBCAST 2026)</strong></br> 
+        Supervised by Dr. Qazi Mazhar ul Haq (Assistant Professor, Department of Computer Science and Engineering, Yuan Ze University)
+    </p>
+
+    <p>
+        This project introduces a <strong>mechanism-aware clinical machine learning audit</strong> for 
+        evaluating whether model-selection decisions remain stable under different forms of missing data. 
+        Using a <strong>MIMIC-IV v3.1 in-hospital mortality cohort of 14,081 ICU admissions</strong>, the study 
+        systematically examines three missingness mechanisms: Missing Completely At Random (MCAR), 
+        Missing At Random (MAR), and Missing Not At Random (MNAR), across multiple missingness rates, 
+        split policies, random seeds, and model families.
+    </p>
+
+    <p>
+        Five classifier families, including <strong>Logistic Regression, calibrated Linear SVM, Random Forest, 
+        XGBoost, and Extra Trees</strong>, were evaluated under a fold-safe, leakage-controlled protocol. 
+        The analysis uses winner-flip rate, Kendall’s τ, Spearman’s ρ, top-1/top-2 AUROC margin, and 
+        missingness-indicator AUROC to assess whether the selected model remains reliable under 
+        plausible data-quality perturbations.
+    </p>
+
+    <p>
+        The findings show that missingness mechanism, not missingness rate alone, can determine the 
+        reliability of clinical model-selection claims. MCAR preserves relatively stable winner selection 
+        even at high missingness levels, while MAR causes sharper degradation under severe perturbation. 
+        MNAR produces a qualitatively different failure mode: apparent AUROC can rise to near-ceiling 
+        levels while winner identity becomes highly unstable, suggesting that models may exploit 
+        outcome-linked missingness patterns rather than robust clinical signals.
+    </p>
+
+    <p class="tag">
+        Clinical Machine Learning · Missing Data · MCAR · MAR · MNAR · Model Selection Stability · MIMIC-IV · Shortcut Learning
+    </p>
+     <p>GitHub Repository: <a href="https://github.com/NattakittiP/MissingnessMechanismMatters" target="_blank">github.com/NattakittiP/MissingnessMechanismMatters</a></p>
 </article>
         
  <h3 class="subsection-title">In Preparation</h3>
