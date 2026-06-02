@@ -893,6 +893,59 @@ for more trustworthy comparative evaluation in biomedical machine learning.
     </p>
      <p>GitHub Repository: <a href="https://github.com/NattakittiP/MissingnessMechanismMatters" target="_blank">github.com/NattakittiP/MissingnessMechanismMatters</a></p>
 </article>
+
+        <article class="card">
+  <h3>
+    Algebraic Definitional Leakage in Paired Biomedical Prediction Models and a Reproducible Audit Framework (2026)
+  </h3>
+  <p class="meta">
+    The Journal manuscript has been submitted to
+    <strong>npj Digital Medicine (Nature Portfolio, Q1)</strong> and is presently undergoing peer review<br>
+    Supervised by Dr. Qazi Mazhar ul Haq
+    (Assistant Professor, Department of Computer Science and Engineering, Yuan Ze University)
+    and Dr. Yi-Jheng Huang (Associate Professor, Director of International Bachelor Program in Informatics, Yuan Ze University);
+    with clinical collaboration from Dr. Naeem Ul Haq
+    (Associate Professor &amp; Head of Department, Department of Neurosurgery, Bacha Khan Medical College, Mardan Medical Complex, Pakistan)
+  </p>
+  <p>
+    This work formalises <strong>algebraic definitional leakage</strong>, a previously undescribed subtype of
+    label leakage that arises when a biomedical outcome is algebraically derived from predictor measurements.
+    Unlike conventional preprocessing leakage, this mechanism establishes a <strong>bijection between predictor
+    and outcome through an algebraic identity</strong>, rendering standard cross-validation incapable of
+    prevention. The study proves the existence of an <strong>oracle scoring function achieving AUROC → 1.00
+    as n → ∞</strong> (Theorem 1), extends the result to any paired formula Y = h(A, B) invertible in its
+    post-baseline component (Theorem 2), and establishes that inflation does not attenuate with larger
+    cohorts — it sharpens (Proposition 1).
+  </p>
+  <p>
+    A fully synthetic benchmark with exact ground-truth control demonstrates a sharp separation between
+    <strong>Tier 1 algebraic leakage (ΔAUC +0.49–+0.52)</strong> and all preprocessing leakage types
+    combined (≤ +0.007), a greater than 70-fold difference. Four real-world cohorts spanning two formula
+    classes and over 267,000 records corroborate the mechanism: direct paired-formula audits
+    (<strong>CGMacros</strong>, N = 1,695; <strong>ICU glucose management</strong>, N = 60,705) and
+    administrative-label audits (<strong>eICU</strong>, N = 193,153; <strong>MIMIC-IV</strong>,
+    N = 14,081) all confirm near-ceiling leaky discrimination with AUROC SD = 0.0000 at scale.
+    The study further introduces the <strong>Attribution Distortion Index (ADI)</strong> to quantify how
+    definitional leakage systematically corrupts SHAP feature-importance rankings, displacing clinically
+    actionable predictors from top attribution positions.
+  </p>
+  <p>
+    As a primary translational output, the <strong>Paired Outcome Leakage Reporting Checklist
+    (POLRC)</strong> — a 12-item, three-domain instrument traceable to the formal theorems — is proposed
+    as a domain-specific complement to TRIPOD and CONSORT-AI for paired-outcome biomedical prediction
+    studies. A targeted audit of 15 published paired-biomarker studies finds that 9/15 (60%) fail at
+    least one Domain A item and no paper meets the POLRC passing threshold of ≥ 10/12, with six-rater
+    inter-rater reliability κ = 0.955. All benchmark code, configuration files, and external audit
+    scripts support <strong>one-command reproduction</strong>.
+  </p>
+  <p class="tag">
+   Algebraic Leakage · Paired Biomedical Outcomes · AUROC Inflation · POLRC · Clinical AI
+  </p>
+  <p>
+    <strong>GitHub Repository:</strong>
+    <a href="https://github.com/NattakittiP/algebraic-leakage-benchmark" target="_blank">github.com/NattakittiP/algebraic-leakage-benchmark</a>
+  </p>
+</article>
         
  <h3 class="subsection-title">In Preparation</h3>
 
