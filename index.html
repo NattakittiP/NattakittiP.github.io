@@ -805,101 +805,6 @@ for more trustworthy comparative evaluation in biomedical machine learning.
 
         <article class="card">
   <h3>
-    Ranking Instability Under Latent Evaluation Shifts:
-    Integrity-Aware Model Selection Beyond Leaderboards (2026)
-  </h3>
-
-  <p class="meta">
-    The conference manuscript has been submitted to 
-    <strong>the Fortieth Annual Conference on Neural Information Processing Systems (NeurIPS 2026)</strong> and is presently undergoing peer review<br>
-    Supervised by Dr. Yi-Jheng Huang (Associate Professor, Director of International Bachelor Program in Informatics, Yuan Ze University)  
-  </p>
-
-  <p>
-    This work studies <strong>comparative evaluation failure</strong> in model selection:
-    even when multiple models achieve near-ceiling discrimination in one plausible evaluation environment,
-    their <strong>relative ordering (rankings) can systematically reverse</strong> under subtle, under-specified changes
-    such as dataset editions, labeling policies, cohort rules, and split protocols—termed
-    <strong>latent evaluation shifts</strong>.
-  </p>
-
-  <p>
-    Using controlled multi-environment evaluations, the study demonstrates that
-    <strong>near-perfect AUROC (≈ 0.998) on the MIMIC-IV full release can coexist with large ranking divergence</strong>
-    when switching to the official MIMIC-IV demo release (AUROC ≈ 0.60–0.75),
-    with <strong>~60% of model pairs reversing their ordering</strong>.
-    Extensive audits (e.g., leakage hardening, split checks, and sensitivity analyses) indicate the effect is
-    <strong>structural</strong> rather than random noise.
-  </p>
-
-  <p>
-    The work introduces <strong>STABLE-MERGE</strong>, an integrity-aware selection framework that:<br>
-    (1) formalizes ranking instability via <strong>pairwise preference flips</strong>, global flip rate, and model-level
-    <strong>flip involvement (FlipInv)</strong><br>
-    (2) connects ranking fragility to deployment consequences via <strong>Winner’s Regret</strong> under environment transfer<br>
-    (3) performs selection by enforcing <strong>joint constraints on calibration error (ECE)</strong> and
-    <strong>ranking stability (FlipInv)</strong>.
-  </p>
-
-  <p>
-    Crucially, STABLE-MERGE can <strong>explicitly certify infeasibility</strong> when no candidate satisfies minimum integrity
-    requirements (calibration + stability), and then returns a <strong>flagged minimax-regret fallback</strong> to reduce
-    worst-case deployment loss under environment uncertainty, making fragility transparent rather than
-    forcing a potentially non-transferable “leaderboard winner.”
-  </p>
-
-  <p class="tag">
-    Model Selection · Evaluation Stability · Dataset Editions · Calibration · Deployment Risk · Robust Comparative Evaluation
-  </p>
-
-  <p>
-    <strong>GitHub Repository:</strong> TBA
-  </p>
-</article>
-
-                <article class="card">
-    <h3> Missingness Mechanism Matters: Auditing Clinical Model Selection Stability Under MCAR, MAR, and MNAR Perturbations (2026) </h3>
-
-    <p class="meta">
-        The conference manuscript has been submitted to 
-        <strong>The International Bhurban Conference on Applied Sciences &amp; Technology 2026 (IBCAST 2026)</strong> and is presently undergoing peer review<br> 
-        Supervised by Dr. Qazi Mazhar ul Haq (Assistant Professor, Department of Computer Science and Engineering, Yuan Ze University)
-    </p>
-
-    <p>
-        This project introduces a <strong>mechanism-aware clinical machine learning audit</strong> for 
-        evaluating whether model-selection decisions remain stable under different forms of missing data. 
-        Using a <strong>MIMIC-IV v3.1 in-hospital mortality cohort of 14,081 ICU admissions</strong>, the study 
-        systematically examines three missingness mechanisms: Missing Completely At Random (MCAR), 
-        Missing At Random (MAR), and Missing Not At Random (MNAR), across multiple missingness rates, 
-        split policies, random seeds, and model families.
-    </p>
-
-    <p>
-        Five classifier families, including <strong>Logistic Regression, calibrated Linear SVM, Random Forest, 
-        XGBoost, and Extra Trees</strong>, were evaluated under a fold-safe, leakage-controlled protocol. 
-        The analysis uses winner-flip rate, Kendall’s τ, Spearman’s ρ, top-1/top-2 AUROC margin, and 
-        missingness-indicator AUROC to assess whether the selected model remains reliable under 
-        plausible data-quality perturbations.
-    </p>
-
-    <p>
-        The findings show that the missingness mechanism, not the missingness rate alone, can determine the 
-        reliability of clinical model-selection claims. MCAR preserves relatively stable winner selection 
-        even at high missingness levels, while MAR causes sharper degradation under severe perturbation. 
-        MNAR produces a qualitatively different failure mode: apparent AUROC can rise to near-ceiling 
-        levels while winner identity becomes highly unstable, suggesting that models may exploit 
-        outcome-linked missingness patterns rather than robust clinical signals.
-    </p>
-
-    <p class="tag">
-        Clinical Machine Learning · Missing Data · MCAR · MAR · MNAR · Model Selection Stability · MIMIC-IV · Shortcut Learning
-    </p>
-     <p>GitHub Repository: <a href="https://github.com/NattakittiP/MissingnessMechanismMatters" target="_blank">github.com/NattakittiP/MissingnessMechanismMatters</a></p>
-</article>
-
-        <article class="card">
-  <h3>
     Algebraic Definitional Leakage in Paired Biomedical Prediction Models and a Reproducible Audit Framework (2026)
   </h3>
   <p class="meta">
@@ -1032,6 +937,100 @@ for more trustworthy comparative evaluation in biomedical machine learning.
           <p class="tag">Machine Learning · Bioinformatics · Data Leakage Control · Reproducible Research</p>
             <p>GitHub Repository: <a href="https://github.com/NattakittiP/WBV-TCR-ML-Study" target="_blank">github.com/NattakittiP/WBV-TCR-ML-Study</a></p>
         </article>
+
+        <article class="card">
+  <h3>
+    Ranking Instability Under Latent Evaluation Shifts:
+    Integrity-Aware Model Selection Beyond Leaderboards (2026)
+  </h3>
+
+  <p class="meta">
+    Conference manuscript under preparation for submission<br>
+    Supervised by Dr. Yi-Jheng Huang (Associate Professor, Director of International Bachelor Program in Informatics, Yuan Ze University)  
+  </p>
+
+  <p>
+    This work studies <strong>comparative evaluation failure</strong> in model selection:
+    even when multiple models achieve near-ceiling discrimination in one plausible evaluation environment,
+    their <strong>relative ordering (rankings) can systematically reverse</strong> under subtle, under-specified changes
+    such as dataset editions, labeling policies, cohort rules, and split protocols—termed
+    <strong>latent evaluation shifts</strong>.
+  </p>
+
+  <p>
+    Using controlled multi-environment evaluations, the study demonstrates that
+    <strong>near-perfect AUROC (≈ 0.998) on the MIMIC-IV full release can coexist with large ranking divergence</strong>
+    when switching to the official MIMIC-IV demo release (AUROC ≈ 0.60–0.75),
+    with <strong>~60% of model pairs reversing their ordering</strong>.
+    Extensive audits (e.g., leakage hardening, split checks, and sensitivity analyses) indicate the effect is
+    <strong>structural</strong> rather than random noise.
+  </p>
+
+  <p>
+    The work introduces <strong>STABLE-MERGE</strong>, an integrity-aware selection framework that:<br>
+    (1) formalizes ranking instability via <strong>pairwise preference flips</strong>, global flip rate, and model-level
+    <strong>flip involvement (FlipInv)</strong><br>
+    (2) connects ranking fragility to deployment consequences via <strong>Winner’s Regret</strong> under environment transfer<br>
+    (3) performs selection by enforcing <strong>joint constraints on calibration error (ECE)</strong> and
+    <strong>ranking stability (FlipInv)</strong>.
+  </p>
+
+  <p>
+    Crucially, STABLE-MERGE can <strong>explicitly certify infeasibility</strong> when no candidate satisfies minimum integrity
+    requirements (calibration + stability), and then returns a <strong>flagged minimax-regret fallback</strong> to reduce
+    worst-case deployment loss under environment uncertainty, making fragility transparent rather than
+    forcing a potentially non-transferable “leaderboard winner.”
+  </p>
+
+  <p class="tag">
+    Model Selection · Evaluation Stability · Dataset Editions · Calibration · Deployment Risk · Robust Comparative Evaluation
+  </p>
+
+  <p>
+    <strong>GitHub Repository:</strong> TBA
+  </p>
+</article>
+
+                <article class="card">
+    <h3> Missingness Mechanism Matters: Auditing Clinical Model Selection Stability Under MCAR, MAR, and MNAR Perturbations (2026) </h3>
+
+    <p class="meta">
+        Conference manuscript under preparation for submission<br> 
+        Supervised by Dr. Qazi Mazhar ul Haq (Assistant Professor, Department of Computer Science and Engineering, Yuan Ze University)
+    </p>
+
+    <p>
+        This project introduces a <strong>mechanism-aware clinical machine learning audit</strong> for 
+        evaluating whether model-selection decisions remain stable under different forms of missing data. 
+        Using a <strong>MIMIC-IV v3.1 in-hospital mortality cohort of 14,081 ICU admissions</strong>, the study 
+        systematically examines three missingness mechanisms: Missing Completely At Random (MCAR), 
+        Missing At Random (MAR), and Missing Not At Random (MNAR), across multiple missingness rates, 
+        split policies, random seeds, and model families.
+    </p>
+
+    <p>
+        Five classifier families, including <strong>Logistic Regression, calibrated Linear SVM, Random Forest, 
+        XGBoost, and Extra Trees</strong>, were evaluated under a fold-safe, leakage-controlled protocol. 
+        The analysis uses winner-flip rate, Kendall’s τ, Spearman’s ρ, top-1/top-2 AUROC margin, and 
+        missingness-indicator AUROC to assess whether the selected model remains reliable under 
+        plausible data-quality perturbations.
+    </p>
+
+    <p>
+        The findings show that the missingness mechanism, not the missingness rate alone, can determine the 
+        reliability of clinical model-selection claims. MCAR preserves relatively stable winner selection 
+        even at high missingness levels, while MAR causes sharper degradation under severe perturbation. 
+        MNAR produces a qualitatively different failure mode: apparent AUROC can rise to near-ceiling 
+        levels while winner identity becomes highly unstable, suggesting that models may exploit 
+        outcome-linked missingness patterns rather than robust clinical signals.
+    </p>
+
+    <p class="tag">
+        Clinical Machine Learning · Missing Data · MCAR · MAR · MNAR · Model Selection Stability · MIMIC-IV · Shortcut Learning
+    </p>
+     <p>GitHub Repository: <a href="https://github.com/NattakittiP/MissingnessMechanismMatters" target="_blank">github.com/NattakittiP/MissingnessMechanismMatters</a></p>
+</article>
+
 
 
     </section>
