@@ -22,6 +22,6 @@ Images load as their entries approach the viewport. Every Research and Projects 
 
 Research contains separate Accepted & Published Works (Journal Paper and Conference Paper) and Preprint categories. Knowbind and Multi-World also appear in Selected Work. Projects precede Leadership & Policy. Only the opening introduction paragraph is justified; other long-form text is left aligned.
 
-All 121 original text blocks and their links were retained. The nine tag lines were removed as requested. Details remain available through expandable sections.
+All 120 unchanged original text blocks and their links were retained. The Contact collaboration statement was updated at the owner's request to reflect the current research and policy focus. The nine tag lines were removed as requested. Details remain available through expandable sections.
 
 The font licenses for DM Sans and Newsreader are included in `assets/`.
