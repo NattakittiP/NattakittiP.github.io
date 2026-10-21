@@ -447,25 +447,14 @@
     </p>
 
     <p>
-        This project develops a <strong>leakage-controlled and explainable machine learning framework</strong> 
-        for predicting elevated postprandial triglyceride (TG) response using only routine fasting biomarkers.
-        Using a dataset of <strong>1,500 clinical records</strong>, I built a fully reproducible pipeline with
-        per-fold preprocessing, probability calibration, and SHAP-based interpretability to ensure 
-        methodological rigor and real-world reliability.
-    </p>
-
-    <p>
-        The study demonstrates that simple fasting biomarkers, particularly <strong>fasting triglycerides (TG<sub>0h</sub>)</strong>, 
-        encode reproducible metabolic signals relevant to postprandial lipid behavior, even without invasive or 
-        time-intensive testing. The work emphasizes <strong>model transparency</strong> and 
-        <strong>rigorous leakage prevention</strong> as critical best practices in clinical machine learning,
-        supporting reliable early-stage metabolic risk stratification research.
-    </p>
-
-    <p class="tag">
-        Machine Learning · Clinical Biomarkers · Metabolic Risk Modeling · Calibration · Explainable AI
+    This study develops a <strong>leakage-controlled, explainable machine learning framework</strong>
+    to predict postprandial triglyceride response from <strong>1,500 clinical records</strong>.
+    Calibrated logistic regression achieved an <strong>AUROC of 0.776</strong>,
+    identifying <strong>fasting triglycerides as the strongest predictor</strong>.
+    The findings highlight the potential of routine biomarkers for
+    <strong>reproducible metabolic risk assessment research</strong>.
     </p> 
-           
+            
     <p>GitHub Repository: <a href="https://github.com/NattakittiP/TG4h_Predict" target="_blank">github.com/NattakittiP/TG4h_Predict</a></p>
     <p>DOI: 10.1109/ISCBI69404.2026.11495924</p>
     <p>Full Paper: <a href="https://ieeexplore.ieee.org/document/11495924" target="_blank">Link to Full Paper</a></p>
@@ -482,26 +471,16 @@
     </p>
 
     <p>
-        This study proposes a <strong>data-driven risk stratification framework</strong> using
-        whole blood viscosity (WBV) and triglyceride clearance rate (TCR) as potential
-        metabolic–oncologic markers. Using a retrospective cohort of
-        <strong>1,500 patients</strong>, I developed a leakage-controlled machine learning pipeline
-        to examine whether routinely collected physiological and biochemical measurements
-        can meaningfully capture cancer-related risk signals.
+    This study examines the relationship between
+    <strong>whole blood viscosity (WBV) and triglyceride clearance rate (TCR)</strong>
+    in <strong>1,500 patients</strong>, exploring potential links to
+    cancer-related metabolic pathways. Statistical and regression analyses
+    found <strong>no significant association (r = 0.015; R² = 0.000)</strong>,
+    including across age and sex subgroups. These findings provide
+    <strong>valuable negative evidence</strong> that challenges previously
+    proposed associations and informs future metabolic and oncologic research.
     </p>
 
-    <p>
-        The work emphasizes robust feature preprocessing, strict data partitioning to
-        prevent information leakage, and realistic performance evaluation. Beyond
-        predictive performance, the study highlights the importance of
-        <strong>methodological transparency</strong> in biomedical machine learning, particularly
-        when models are intended to support early screening or risk communication in
-        real-world healthcare settings.
-    </p>
-
-    <p class="tag">
-        Bioinformatics · Hemorheology · Cancer Risk Modeling · Metabolic Dysregulation
-    </p>
     <p>DOI: 10.1109/ICBCB69424.2026.11621175</p>
     <p>Full Paper: <a href="https://ieeexplore.ieee.org/abstract/document/11621175" target="_blank">Link to Full Paper</a></p>
     <p>Certificate of Presentation: <a href="https://drive.google.com/file/d/1I0hWOd1Oe68mOjTiPeWTv6-bjl-iAyVJ/view?usp=sharing" target="_blank">Link to Certificate</a></p>
@@ -517,34 +496,17 @@
     </p>
 
     <p>
-        This project introduces a <strong>human–machine learning framework</strong> for predicting 
-        whether a student can visually read another student’s written answers under realistic 
-        classroom viewing conditions. A <strong>300-scenario multimodal dataset</strong> was constructed,
-        capturing geometric factors (distance, angular size, text height), display characteristics,
-        head-pose angles, and a continuous visibility score derived from human perception.
+    This study develops an <strong>interpretable machine learning framework</strong>
+    to predict human text legibility across <strong>300 classroom viewing scenarios</strong>.
+    Logistic Regression achieved an <strong>AUC of 0.962</strong>, while a
+    <strong>visibility-only model reached approximately 0.99</strong>, outperforming
+    geometry-only prediction (0.74). The findings identify
+    <strong>perceptual visibility as the dominant predictor of readability</strong>,
+    supporting simpler, visibility-aware AI systems for exam security.
     </p>
-
-    <p>
-        Using this dataset, <strong>Logistic Regression and Random Forest classifiers</strong> were trained 
-        to predict the binary outcome <em>can_read</em>, achieving a test-set 
-        <strong>AUC of 0.962</strong>. Feature-importance analyses show that the visibility score acts as a 
-        <strong>highly informative perceptual variable</strong>, dominating all geometric predictors and 
-        effectively serving as a compact legibility descriptor. Partial-dependence curves further reveal 
-        clear perceptual thresholds and the dominant influence of visibility over raw geometry.
-    </p>
-
-    <p>
-        This work provides the first visibility-based framework for assessing <strong>cheating feasibility</strong> 
-        in physical examination settings. The findings support the design of visibility-aware 
-        <strong>AI proctoring systems</strong>, classroom layout optimisation tools, and fairer 
-        technology-enhanced assessment environments based on interpretable 
-        human-vision principles.
-    </p>
-
-    <p class="tag">
-        Visibility Modeling · Exam Security · Machine Learning · Academic Integrity · Educational Technology
-    </p>
+            
      <p>GitHub Repository: <a href="https://github.com/NattakittiP/visibility_demo_version" target="_blank">github.com/NattakittiP/visibility_demo_version</a></p>
+    <p>Full Paper: <a href="https://drive.google.com/file/d/1mZY38BKzEH5d3i3lUck77tS5Tgw1Qne6/view?usp=sharing" target="_blank">Link to Full Paper</a></p>
     <p>Certificate of Presentation: <a href="https://drive.google.com/file/d/1vhR3MCcU8_e_p-IM8MFG76Q5M8TI5TaO/view?usp=sharing" target="_blank">Link to Certificate</a></p>
 </article>
 
@@ -560,47 +522,18 @@
         Supervised by Dr. Qazi Mazhar ul Haq (Assistant Professor, Department of Computer Science and Engineering, Yuan Ze University)
   </p>
 
-  <p>
-    This work argues that <strong>seed-based reproducibility is not equivalent to protocol validity</strong>:
-    stable cross-validation metrics across random seeds can still occur under flawed or poorly specified
-    evaluation designs. To address this, the study proposes a <strong>protocol-level audit framework</strong>
-    that systematically separates three often-confounded factors in empirical ML studies:
-    <strong>split policy</strong>, <strong>leakage protocol</strong>, and <strong>model family</strong>.
-  </p>
 
-  <p>
-    The paper constructs an explicit <strong>audit matrix</strong> spanning
-    two outer split strategies (<strong>StratifiedKFold</strong> vs. <strong>GroupKFold</strong>),
-    four leakage variants (<strong>P0–P3</strong>, from strictly fold-safe nested CV with
-    <strong>calibration-before-tuning</strong> to progressively violated settings),
-    and five model families (L2-Logistic Regression, Linear SVM, Random Forest, XGBoost, ExtraTrees).
-    Model selection is performed via a <strong>predefined lexicographic rule</strong>
-    (<strong>AUROC → AP → Brier</strong>) to avoid metric cherry-picking.
-  </p>
-
-  <p>
-    To align evaluation with real decision-making, the study introduces
-    <strong>winner flip percentage</strong> as a decision-level stability metric, quantifying how often the
-    <strong>selected winner model</strong> changes under seed perturbations (20 independent seeds).
-    Across <strong>260 configurations</strong> and <strong>1,300 outer-fold evaluations</strong>,
-    the winner identity remains <strong>invariant</strong> (XGBoost) across split policies,
-    leakage variants, and seed sweeps, while still revealing that
-    <strong>split policy induces measurable performance shifts</strong> and that
-    <strong>leakage effects are configuration-dependent (not uniformly inflationary)</strong>.
-  </p>
-
-  <p>
-    A <strong>synthetic control experiment</strong> further validates pipeline coherence:
-    injecting <strong>15% MCAR missingness</strong> yields a clear degradation signal whose magnitude
-    exceeds protocol-induced shifts, reinforcing that data-quality effects can dominate protocol choices
-    even when the selected winner remains unchanged.
-  </p>
-
-  <p class="tag">
-    Model Evaluation · Reproducibility · Data Leakage · Cross-Validation · Split Policy · Decision Stability · Protocol Audit
-  </p>
-
-
+    <p>
+    This study introduces a <strong>protocol-level audit framework</strong>
+    to examine how data splitting, leakage, and random seeds affect
+    machine learning model selection. Across <strong>260 configurations
+    and 1,300 evaluations</strong>, XGBoost remained the top-ranked model,
+    despite measurable performance shifts and degradation under missingness.
+    The findings demonstrate that <strong>seed-based reproducibility does
+    not guarantee methodological validity</strong>, highlighting the
+    importance of rigorous protocol auditing in trustworthy AI.
+    </p>
+    
     <p>GitHub Repository:</strong> <a href="https://github.com/NattakittiP/Protocol_Audit" target="_blank">github.com/NattakittiP/Protocol_Audit</a></p>
     <p>DOI: 10.1109/JCSSE68839.2026.11597035</p>
     <p>Full Paper: <a href="https://ieeexplore.ieee.org/abstract/document/11597035" target="_blank">Link to Full Paper</a></p>
@@ -619,35 +552,26 @@
         and Dr. Yi-Jheng Huang (Associate Professor, Director of International Bachelor Program in Informatics, Yuan Ze University)
     </p>
 
-   <p>
-        This work proposes a <strong>seven-world synthetic benchmarking framework</strong> for
-        systematically evaluating model integrity in clinical machine learning across four
-        complementary dimensions:
-        <strong>Reliability, Robustness, Calibration Stability, and Explainability Stability (RSCE)</strong>.
-        Each synthetic world introduces analytically controlled perturbations, including
-        distribution shift, missingness, measurement noise, surrogate-feature corruption,
-        nonlinear distortion, and label noise.
+    <p>
+    This study introduces a <strong>seven-world synthetic benchmark</strong>
+    for evaluating clinical machine learning through
+    <strong>Reliability, Robustness, Calibration Stability, and
+    Explainability Stability (RSCE)</strong>. It systematically stress-tests
+    models under distribution shift, missingness, measurement noise,
+    surrogate corruption, nonlinear distortion, and label noise.
     </p>
 
     <p>
-        The benchmark evaluates a diverse <strong>20-model clinical ML zoo</strong> using a unified
-        RSCE scoring scheme, SHAP-based attribution stability analysis, calibration-drift metrics,
-        and bootstrap uncertainty quantification. Results show that
-        <strong>tree-based ensemble models consistently achieve the most balanced integrity profiles</strong>,
-        while several neural and kernel-based models exhibit increased sensitivity to missingness,
-        proxy drift, and nonlinear perturbations.
+    Across <strong>15,000+ experimental configurations</strong>,
+    <strong>tree-based ensembles demonstrated consistently balanced
+    integrity</strong>, while models with similar baseline accuracy
+    showed substantial differences under stress.
+    External evaluations on <strong>NHANES and MIMIC-IV</strong>
+    showed qualitatively consistent degradation patterns,
+    supporting <strong>RSCE as a reproducible framework for
+    pre-deployment model reliability assessment</strong>.
     </p>
 
-    <p>
-        By providing a <strong>fully reproducible, leakage-aware, and analytically transparent</strong>
-        evaluation pipeline, this study offers a rigorous framework for pre-deployment stress testing
-        of clinical ML systems, supporting integrity-aware model selection and governance under
-        deployment-time uncertainty.
-    </p>
-
-    <p class="tag">
-        Synthetic Benchmark · RSCE · Clinical Machine Learning · Model Robustness · Explainability
-    </p>
     <p>GitHub Repository: <a href="https://github.com/NattakittiP/7World_ML_Benchmark" target="_blank">github.com/NattakittiP/7World_ML_Benchmark</a></p>
     <p>DOI: 10.1109/ACCESS.2026.3666756</p>
     <p>Full Paper: <a href="https://ieeexplore.ieee.org/abstract/document/11404134" target="_blank">Link to Full Paper</a></p>        
@@ -665,375 +589,137 @@
     </p>
 
     <p>
-        This study introduces a <strong>strict leakage-controlled and reproducible machine learning framework</strong>
-        to examine whether whole-blood viscosity (WBV) independently influences postprandial triglyceride 
-        clearance rate (TCR). Using a <strong>statistically reconstructed synthetic clinical cohort</strong>,
-        the pipeline integrates fold-specific preprocessing, nested cross-validation, probability calibration,
-        bootstrap robustness testing, and SHAP-based interpretability.
+    This study develops a <strong>leakage-controlled machine learning framework</strong>
+    using <strong>1,500 synthetic clinical records</strong> to investigate the role of
+    whole blood viscosity (WBV) in postprandial triglyceride response.
+    The framework integrates <strong>nested cross-validation, probability calibration,
+    robustness testing, and SHAP explainability</strong>.
     </p>
 
     <p>
-        Across all models and sensitivity analyses, the framework reveals a 
-        <strong>consistent null association</strong> between WBV and short-term triglyceride clearance after
-        accounting for key metabolic factors. The work demonstrates the scientific importance of 
-        <strong>transparent null findings</strong>, showcasing how rigorous leakage prevention and 
-        open synthetic-data pipelines can improve methodological reliability in biomedical informatics 
-        and strengthen future clinical decision-support research.
+    The model achieved an <strong>AUROC of 0.914</strong>, identifying
+    <strong>fasting triglycerides as the dominant predictor</strong>, while WBV
+    showed <strong>negligible predictive contribution</strong> under the synthetic
+    assumptions. The findings highlight the value of
+    <strong>reproducible evaluation and transparent null results</strong>
+    in trustworthy biomedical machine learning.
     </p>
 
-    <p class="tag">
-        Machine Learning · Synthetic Clinical Data · Hemorheology · Data Leakage Control · Reproducible Research
-    </p>
    <p>GitHub Repository: <a href="https://github.com/NattakittiP/ML_Predict" target="_blank">github.com/NattakittiP/ML_Predict</a></p>
    <p>DOI: 10.1038/s41598-026-47362-4</p>
     <p>Full Paper: <a href="https://www.nature.com/articles/s41598-026-47362-4" target="_blank">Link to Full Paper</a></p>
 </article>
 
-        <h3 class="subsection-title">Under Peer Review</h3>
+        <h3 class="subsection-title">Preprint</h3>
 
         
                 <article class="card">
     <h3>
-        Dataset Edition as a Source of Evaluation Divergence in Clinical Machine Learning:
-A Controlled Study on MIMIC-IV Demo and Full Releases (2026)
+        Can MIMIC-IV Demo Support Model Selection? An Audit Against Full Data (2026)
     </h3>
 
+
     <p class="meta">
-        Journal manuscript has been submitted to 
-        <strong>BMC Medical Research Methodology (Springer Nature, Q1)</strong><br>
-         Supervised by Dr. Qazi Mazhar ul Haq
-        (Assistant Professor, Department of Computer Science and Engineering, Yuan Ze University)
-        and Dr. Yi-Jheng Huang (Associate Professor, Director of International Bachelor Program in Informatics, Yuan Ze University)
-    </p>
-
-    <p>
-        This work examines <strong>dataset edition as a structural factor</strong> in clinical
-        machine learning evaluation, demonstrating that the widely used
-        <strong>MIMIC-IV demo dataset cannot be treated as a simple small-sample proxy</strong>
-        of the full cohort.
-        Under a strictly controlled experimental design, the study isolates the effect of
-        dataset choice by holding preprocessing, modeling, hyperparameters, and evaluation
-        protocols fixed.
-    </p>
-
-    <p>
-        Across a diverse set of models, performance metrics, robustness scenarios, and
-        interpretability analyses, the study reveals
-        <strong>systematic divergence between demo- and full-based conclusions</strong>.
-        These divergences extend beyond pointwise performance to affect
-        <strong>model ranking, calibration behavior, robustness profiles, and explanation stability</strong>,
-        even when identical pipelines are used.
-    </p>
-
-    <p>
-        Importantly, the work introduces <strong>decision-level evaluation via
-        prevalence-standardized positive predictive value</strong>,
-        showing that operating-point conclusions can differ markedly between dataset editions
-        even after explicitly controlling for outcome prevalence.
-        This finding highlights that dataset-induced divergence reflects differences in
-        error structure and threshold behavior rather than base-rate effects alone.
-    </p>
-
-    <p>
-        By framing dataset choice as a <strong>regime-defining component</strong> of the evaluation
-        pipeline, this study provides a principled explanation for inconsistent findings
-        across clinical ML benchmarks and emphasizes the need for
-        <strong>transparent reporting, stability analysis, and dataset-aware interpretation</strong>
-        when drawing comparative or deployment-oriented conclusions.
-    </p>
-
-    <p class="tag">
-        Clinical Machine Learning · Dataset Shift · Evaluation Stability ·
-        Decision-Level Metrics · Reproducibility
-    </p>
-    <p>GitHub Repository:</strong> <a href="https://github.com/NattakittiP/mimic-iv-dataset-edition-audit" target="_blank">github.com/NattakittiP/mimic-iv-dataset-edition-audit</a></p>
-</article>
-
-        <article class="card">
-  <h3>
-   Protocol-Level Auditing for Reliable Clinical Machine Learning Evaluation (2026)
-  </h3>
-
-  <p class="meta">
-    The Journal manuscript has been submitted to 
-        <strong>IEEE Journal of Biomedical and Health Informatics (IEEE, Q1)</strong> and is presently undergoing peer review<br>
-        Supervised by Dr. Qazi Mazhar ul Haq
-        (Assistant Professor, Department of Computer Science and Engineering, Yuan Ze University)
-        and Dr. Yi-Jheng Huang (Associate Professor, Director of International Bachelor Program in Informatics, Yuan Ze University)
-  </p>
-
-  <p>
-This work introduces a <strong>protocol-level audit framework</strong> for assessing the
-<strong>reliability of model evaluation and model selection</strong> in clinical machine learning.
-Rather than proposing a new predictor, the study examines how seemingly minor evaluation
-decisions, such as <strong>data splitting policy</strong>, <strong>preprocessing placement</strong>,
-and the ordering of <strong>hyperparameter tuning and probability calibration</strong>, 
-can systematically change reported performance and even alter the identity of the selected
-“best” model.
-</p>
-
-<p>
-Evaluation reliability is operationalized through a
-<strong>locked audit matrix of leakage-explicit protocol variants (P0–P3)</strong>,
-contrasting a strict fold-safe pipeline with controlled protocol deviations that emulate
-common methodological errors. The framework is evaluated across
-<strong>three complementary cohorts</strong>, a real ICU mortality cohort from
-<strong>MIMIC-IV</strong>, a <strong>synthetic physiologic dataset</strong> for controlled stress testing,
-and an external multi-centre ICU cohort from <strong>eICU</strong> with
-<strong>leakage-guarded feature hygiene</strong>. Five representative model families are assessed
-using nested cross-validation, calibration-aware training, and deterministic experiment logging.
-</p>
-
-<p>
-Beyond conventional performance metrics, the study treats
-<strong>ranking stability as a primary evaluation objective</strong>,
-introducing diagnostics such as <strong>winner flip percentage</strong>,
-<strong>rank-correlation analysis</strong>, and <strong>top-2 margin inspection</strong>,
-along with stress tests under <strong>missingness</strong> and
-<strong>label-prevalence shift</strong>. Results show that model rankings and winner identity
-can change under protocol variation and realistic data perturbations, with many reversals
-arising in <strong>near-tie performance regimes</strong>. By reframing evaluation as an auditable,
-stress-testable process, the work provides a <strong>reproducible and leakage-aware framework</strong>
-for more trustworthy comparative evaluation in biomedical machine learning.
-</p>
-
-  <p class="tag">
-    Biomedical Machine Learning · Protocol Audit · Ranking Stability · Data Leakage · Robust Evaluation · Clinical AI
-  </p>
-
-
-    <p>GitHub Repository:</strong> <a href="https://github.com/NattakittiP/Full_PHASE_Audit_Protocal" target="_blank">github.com/NattakittiP/Full_PHASE_Audit_Protocal</a></p>
-</article>
-
-        <article class="card">
-  <h3>
-    Algebraic Definitional Leakage in Paired Biomedical Prediction Models and a Reproducible Audit Framework (2026)
-  </h3>
-  <p class="meta">
-    The Journal manuscript has been submitted to
-    <strong> Artificial Intelligence in Medicine (Elsevier, Q1)</strong> and is presently undergoing peer review<br>
+    <strong>Preprint available on ResearchGate</strong><br>
     Supervised by Dr. Qazi Mazhar ul Haq
     (Assistant Professor, Department of Computer Science and Engineering, Yuan Ze University)
-    and Dr. Yi-Jheng Huang (Associate Professor, Director of International Bachelor Program in Informatics, Yuan Ze University);
-    with clinical collaboration from Dr. Naeem Ul Haq
-    (Associate Professor &amp; Head of Department, Department of Neurosurgery, Bacha Khan Medical College, Mardan Medical Complex, Pakistan)
-  </p>
-  <p>
-    This work formalises <strong>algebraic definitional leakage</strong>, a previously undescribed subtype of
-    label leakage that arises when a biomedical outcome is algebraically derived from predictor measurements.
-    Unlike conventional preprocessing leakage, this mechanism establishes a <strong>bijection between predictor
-    and outcome through an algebraic identity</strong>, rendering standard cross-validation incapable of
-    prevention. The study proves the existence of an <strong>oracle scoring function achieving AUROC → 1.00
-    as n → ∞</strong> (Theorem 1), extends the result to any paired formula Y = h(A, B) invertible in its
-    post-baseline component (Theorem 2), and establishes that inflation does not attenuate with larger
-    cohorts, it sharpens (Proposition 1).
-  </p>
-  <p>
-    A fully synthetic benchmark with exact ground-truth control demonstrates a sharp separation between
-    <strong>Tier 1 algebraic leakage (ΔAUC +0.49–+0.52)</strong> and all preprocessing leakage types
-    combined (≤ +0.007), a greater than 70-fold difference. Four real-world cohorts spanning two formula
-    classes and over 267,000 records corroborate the mechanism: direct paired-formula audits
-    (<strong>CGMacros</strong>, N = 1,695; <strong>ICU glucose management</strong>, N = 60,705) and
-    administrative-label audits (<strong>eICU</strong>, N = 193,153; <strong>MIMIC-IV</strong>,
-    N = 14,081) all confirm near-ceiling leaky discrimination with AUROC SD = 0.0000 at scale.
-    The study further introduces the <strong>Attribution Distortion Index (ADI)</strong> to quantify how
-    definitional leakage systematically corrupts SHAP feature-importance rankings, displacing clinically
-    actionable predictors from top attribution positions.
-  </p>
-  <p>
-    As a primary translational output, the <strong>Paired Outcome Leakage Reporting Checklist
-    (POLRC)</strong> a 12-item, three-domain instrument traceable to the formal theorems is proposed
-    as a domain-specific complement to TRIPOD and CONSORT-AI for paired-outcome biomedical prediction
-    studies. A targeted audit of 15 published paired-biomarker studies finds that 9/15 (60%) fail at
-    least one Domain A item and no paper meets the POLRC passing threshold of ≥ 10/12, with six raters
-    inter-rater reliability κ = 0.955. All benchmark code, configuration files, and external audit
-    scripts support <strong>one-command reproduction</strong>.
-  </p>
-  <p class="tag">
-   Algebraic Leakage · Paired Biomedical Outcomes · AUROC Inflation · POLRC · Clinical AI
-  </p>
-  <p>
-    <strong>GitHub Repository:</strong>
-    <a href="https://github.com/NattakittiP/algebraic-leakage-benchmark" target="_blank">github.com/NattakittiP/algebraic-leakage-benchmark</a>
-  </p>
+    and Dr. Yi-Jheng Huang
+    (Associate Professor, Director of International Bachelor Program in Informatics, Yuan Ze University)
+    </p>
+
+    <p>
+    This study investigates whether <strong>MIMIC-IV and MIMIC-IV-ED Demo datasets</strong>
+    can support reliable machine learning model selection. Using identical evaluation
+    protocols on Demo and Full releases, it compares <strong>seven classifiers</strong>
+    through patient-grouped cross-validation, <strong>ten-world RSCE benchmarking</strong>,
+    and robustness analysis.
+    </p>
+
+    <p>
+    Across both clinical tasks, <strong>all seven models performed worse on Demo</strong>,
+    with weak ranking agreement and different top-ranked models.
+    Demo-sized samples recovered the Full-best model in only
+    <strong>2.8–10.7% of cases</strong>. The findings demonstrate that
+    <strong>reproducing a benchmark workflow does not guarantee reproducible
+    scientific conclusions</strong>, highlighting the risks of model selection
+    using small clinical datasets.
+    </p>
+
+     <p>Preprint Paper: <a href="https://www.researchgate.net/publication/416292706_Can_MIMIC-IV_Demo_Support_Model_Selection_An_Audit_Against_Full_Data" target="_blank">Link to Paper</a></p>               
 </article>
-        
- <h3 class="subsection-title">In Preparation</h3>
-
-
-        <article class="card">
-    <h3>
-        Visibility as a Perceptual Mediator for Human Text Legibility:
-        An Interpretable Machine Learning Study (2025)
-    </h3>
-
-    <p class="meta">
-        Journal manuscript under preparation for submission<br>
-        An extended and substantially enhanced version of the ICAIE 2026 conference paper<br>
-        Supervised by Dr. Qazi Mazhar ul Haq
-        (Assistant Professor, Department of Computer Science and Engineering, Yuan Ze University)
-    </p>
-
-    <p>
-        This work investigates <strong>text legibility as a perceptual feasibility problem</strong>
-        rather than a behavioral inference task, introducing <strong>visibility</strong> as a
-        human-rated perceptual mediator between geometric viewing conditions and actual reading success.
-        Through interpretable machine learning, the study examines whether visibility constitutes a
-        <strong>perceptually sufficient statistic</strong> for predicting human text legibility.
-    </p>
-
-    <p>
-        Using a controlled dataset of classroom-style scenarios with systematic variations in
-        viewing distance, angular character size, head pose, display medium, and contrast,
-        the study conducts <strong>extensive ablation, calibration, and robustness analyses</strong>.
-        Results show that models trained solely on visibility achieve
-        <strong>near-ceiling predictive performance</strong>,
-        while geometric and contextual features provide marginal and inconsistent gains once
-        visibility is observed.
-    </p>
-
-    <p>
-        Compared to the ICAIE 2026 version, this IEEE Access manuscript introduces
-        <strong>expanded experimental protocols</strong>, including large-scale repeated cross-validation,
-        structured setting-shift stress tests, probability calibration analysis,
-        and feature-level robustness diagnostics.
-        These extensions provide a more rigorous and transparent examination of
-        <strong>model sufficiency, interpretability, and generalization under perceptual uncertainty</strong>.
-    </p>
-
-    <p>
-        By explicitly separating <strong>perceptual feasibility</strong> from behavioral intent,
-        this work offers a principled foundation for designing fair, interpretable, and
-        deployment-aware AI systems in educational assessment and human-centered sensing environments.
-    </p>
-
-    <p class="tag">
-        Perceptual Visibility · Text Legibility · Interpretable Machine Learning ·
-        Educational AI · Model Sufficiency
-    </p>
-    <p>GitHub Repository: <a href="https://github.com/NattakittiP/visibility_aware_readability" target="_blank">github.com/NattakittiP/visibility_aware_readability</a></p>
-</article>
-
-         <article class="card">
-            <h3>Leakage-Controlled Machine Learning Reveals a Reproducible Null Association Between Whole Blood Viscosity and Triglyceride Clearance Rate </h3>
-            <p class="meta">
-                 Journal manuscript under preparation for submission<br>
-                Supervised by Dr. Qazi Mazhar ul Haq (Assistant Professor, Department of Computer Science and Engineering, Yuan Ze University)
-            </p>
-            <p>
-                Building on the same clinical cohort, this work investigates the relationship
-                between WBV and TCR under a <strong>strict, leakage-controlled validation
-                framework</strong>. By systematically addressing common sources of bias,
-                such as patient-level overlap between training and testing sets and
-                inappropriate feature scaling, the study demonstrates a
-                <strong>reproducible null association</strong> between WBV and TCR.
-            </p>
-            <p>
-                Rather than forcing a positive result, the paper argues for the scientific
-                value of well-documented null findings in bioinformatics. It shows how
-                rigorous evaluation, clear reporting of negative results, and openly
-                described pipelines can prevent overclaiming in biomedical machine
-                learning and support for more reliable translation of models into clinical and
-                public health contexts.
-            </p>
-          <p class="tag">Machine Learning · Bioinformatics · Data Leakage Control · Reproducible Research</p>
-            <p>GitHub Repository: <a href="https://github.com/NattakittiP/WBV-TCR-ML-Study" target="_blank">github.com/NattakittiP/WBV-TCR-ML-Study</a></p>
-        </article>
 
         <article class="card">
   <h3>
-    Ranking Instability Under Latent Evaluation Shifts:
-    Integrity-Aware Model Selection Beyond Leaderboards (2026)
+   Delay or Failure? Network Impairment in Multi-Call LLM Workflows (2026)
   </h3>
 
   <p class="meta">
-    Conference manuscript under preparation for submission<br>
-    Supervised by Dr. Yi-Jheng Huang (Associate Professor, Director of International Bachelor Program in Informatics, Yuan Ze University)  
-  </p>
+    <strong>Preprint available on ResearchGate</strong><br>
+    Supervised by Dr. Qazi Mazhar ul Haq
+    (Assistant Professor, Department of Computer Science and Engineering, Yuan Ze University)
+    and Dr. Yi-Jheng Huang
+    (Associate Professor, Director of International Bachelor Program in Informatics, Yuan Ze University;
+    Corresponding Author).<br>
+    Conducted in research collaboration with the
+    <strong>National Electronics and Computer Technology Center (NECTEC), Thailand</strong>,
+    involving Ekkachan Rattanalerdnusorn and Dr. Chalee Vorakulpipat.
+</p>
 
-  <p>
-    This work studies <strong>comparative evaluation failure</strong> in model selection:
-    even when multiple models achieve near-ceiling discrimination in one plausible evaluation environment,
-    their <strong>relative ordering (rankings) can systematically reverse</strong> under subtle, under-specified changes
-    such as dataset editions, labeling policies, cohort rules, and split protocols—termed
-    <strong>latent evaluation shifts</strong>.
-  </p>
+<p>
+    This study investigates how <strong>network impairment affects the reliability
+    of multi-call LLM workflows</strong> using controlled packet loss, delay,
+    and deadline experiments. A <strong>telemetry-based evaluation framework</strong>
+    separates model-serving time, experimental waiting, and residual overhead
+    to distinguish network-induced delays from workflow failures.
+</p>
 
-  <p>
-    Using controlled multi-environment evaluations, the study demonstrates that
-    <strong>near-perfect AUROC (≈ 0.998) on the MIMIC-IV full release can coexist with large ranking divergence</strong>
-    when switching to the official MIMIC-IV demo release (AUROC ≈ 0.60–0.75),
-    with <strong>~60% of model pairs reversing their ordering</strong>.
-    Extensive audits (e.g., leakage hardening, split checks, and sensitivity analyses) indicate the effect is
-    <strong>structural</strong> rather than random noise.
-  </p>
+<p>
+    All <strong>240 workflows completed under 0–10% packet loss</strong>,
+    despite increasing tail latency. Under severe loss, completion declined
+    from <strong>34/40 for short responses to 9/40 for long responses</strong>.
+    The findings demonstrate that <strong>response length, network conditions,
+    and deadline constraints</strong> jointly determine workflow reliability,
+    informing more rigorous evaluation of <strong>networked agentic AI systems</strong>.
+</p>
 
-  <p>
-    The work introduces <strong>STABLE-MERGE</strong>, an integrity-aware selection framework that:<br>
-    (1) formalizes ranking instability via <strong>pairwise preference flips</strong>, global flip rate, and model-level
-    <strong>flip involvement (FlipInv)</strong><br>
-    (2) connects ranking fragility to deployment consequences via <strong>Winner’s Regret</strong> under environment transfer<br>
-    (3) performs selection by enforcing <strong>joint constraints on calibration error (ECE)</strong> and
-    <strong>ranking stability (FlipInv)</strong>.
-  </p>
-
-  <p>
-    Crucially, STABLE-MERGE can <strong>explicitly certify infeasibility</strong> when no candidate satisfies minimum integrity
-    requirements (calibration + stability), and then returns a <strong>flagged minimax-regret fallback</strong> to reduce
-    worst-case deployment loss under environment uncertainty, making fragility transparent rather than
-    forcing a potentially non-transferable “leaderboard winner.”
-  </p>
-
-  <p class="tag">
-    Model Selection · Evaluation Stability · Dataset Editions · Calibration · Deployment Risk · Robust Comparative Evaluation
-  </p>
-
-  <p>
-    <strong>GitHub Repository:</strong> TBA
-  </p>
+    <p>Preprint Paper: <a href="https://www.researchgate.net/publication/416237233_Delay_or_Failure_Network_Impairment_in_Multi-Call_LLM_Workflows" target="_blank">Link to Paper</a></p>
 </article>
 
-                <article class="card">
-    <h3> Missingness Mechanism Matters: Auditing Clinical Model Selection Stability Under MCAR, MAR, and MNAR Perturbations (2026) </h3>
+        <article class="card">
+  <h3>
+    Trust Without Knowing: Knowbind and Distributed Verification in Scientific Publishing (2026)
+  </h3>
+<p class="meta">
+    <strong>Single-author preprint available on PhilPapers</strong><br>
+    <strong>Sole Author &amp; Corresponding Author:</strong>
+    Nattakitti Piyavechvirat
+    (International Bachelor Program in Informatics,
+    Yuan Ze University, Taiwan).
+</p>
 
-    <p class="meta">
-        Conference manuscript under preparation for submission<br> 
-        Supervised by Dr. Qazi Mazhar ul Haq (Assistant Professor, Department of Computer Science and Engineering, Yuan Ze University)
-    </p>
+<p>
+    This study introduces <strong>Knowbind</strong>, a conceptual framework
+    examining how researchers should rely on scientific claims they
+    <strong>cannot independently verify before critical decisions</strong>.
+    It distinguishes the necessity of proceeding from epistemic justification,
+    arguing for <strong>calibrated, defeasible reliance</strong>
+    grounded in available evidence rather than unquestioned trust.
+</p>
 
-    <p>
-        This project introduces a <strong>mechanism-aware clinical machine learning audit</strong> for 
-        evaluating whether model-selection decisions remain stable under different forms of missing data. 
-        Using a <strong>MIMIC-IV v3.1 in-hospital mortality cohort of 14,081 ICU admissions</strong>, the study 
-        systematically examines three missingness mechanisms: Missing Completely At Random (MCAR), 
-        Missing At Random (MAR), and Missing Not At Random (MNAR), across multiple missingness rates, 
-        split policies, random seeds, and model families.
-    </p>
+<p>
+    The work develops a <strong>seven-field distributed verification framework</strong>
+    tracking scientific accountability, verification evidence, and its
+    limitations. Through structured philosophical analysis and comparative
+    cases, it shows how <strong>Knowbind and distributed verification</strong>
+    clarify responsible scientific decisions under uncertainty.
+    The findings offer a foundation for
+    <strong>more transparent, accountable, and evidence-sensitive
+    scientific publishing</strong>.
+</p>
 
-    <p>
-        Five classifier families, including <strong>Logistic Regression, calibrated Linear SVM, Random Forest, 
-        XGBoost, and Extra Trees</strong>, were evaluated under a fold-safe, leakage-controlled protocol. 
-        The analysis uses winner-flip rate, Kendall’s τ, Spearman’s ρ, top-1/top-2 AUROC margin, and 
-        missingness-indicator AUROC to assess whether the selected model remains reliable under 
-        plausible data-quality perturbations.
-    </p>
-
-    <p>
-        The findings show that the missingness mechanism, not the missingness rate alone, can determine the 
-        reliability of clinical model-selection claims. MCAR preserves relatively stable winner selection 
-        even at high missingness levels, while MAR causes sharper degradation under severe perturbation. 
-        MNAR produces a qualitatively different failure mode: apparent AUROC can rise to near-ceiling 
-        levels while winner identity becomes highly unstable, suggesting that models may exploit 
-        outcome-linked missingness patterns rather than robust clinical signals.
-    </p>
-
-    <p class="tag">
-        Clinical Machine Learning · Missing Data · MCAR · MAR · MNAR · Model Selection Stability · MIMIC-IV · Shortcut Learning
-    </p>
-     <p>GitHub Repository: <a href="https://github.com/NattakittiP/MissingnessMechanismMatters" target="_blank">github.com/NattakittiP/MissingnessMechanismMatters</a></p>
+<p>Preprint Paper: <a href="https://philpapers.org/rec/PIYTWK" target="_blank">Link to Paper</a></p>
+  
 </article>
-
-
 
     </section>
 
