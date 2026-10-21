@@ -16,6 +16,8 @@ A static academic profile built with HTML, CSS, and JavaScript. No build step or
 
 The keys identify the image slots; the value can point to a PNG, JPG, SVG, or WebP file. Leave the value empty to show a placeholder. Selected works and their category entries automatically share the same image. Figures are displayed without cropping.
 
+Images load as their entries approach the viewport. Click a figure to view it at full size.
+
 ## Content and layout
 
 Research contains separate Accepted & Published Works (Journal Paper and Conference Paper) and Preprint categories. Knowbind and Multi-World also appear in Selected Work. Projects precede Leadership & Policy. Only the opening introduction paragraph is justified; other long-form text is left aligned.

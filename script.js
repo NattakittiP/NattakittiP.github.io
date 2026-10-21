@@ -33,15 +33,36 @@
     syncExpand();
   });
   allAbstracts.forEach(detail => detail.addEventListener('toggle', syncExpand));
+  const figureObserver = 'IntersectionObserver' in window ? new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const image = entry.target.querySelector('img');
+      image.src = image.dataset.src;
+      figureObserver.unobserve(entry.target);
+    });
+  }, {rootMargin: '450px 0px'}) : null;
   document.querySelectorAll('.work-figure').forEach(figure => {
     const image = figure.querySelector('img');
+    const imageLink = figure.querySelector('.figure-image-link');
     const placeholder = figure.querySelector('.figure-placeholder');
-    const showFigure = () => { image.hidden = false; placeholder.hidden = true; image.alt = figure.closest('.work').querySelector('.work-title').textContent.trim(); };
-    image.addEventListener('load', showFigure);
-    image.addEventListener('error', () => { image.hidden = true; placeholder.hidden = false; });
+    const title = figure.closest('.work').querySelector('.work-title').textContent.trim();
+    const showFigure = () => { image.hidden = false; imageLink.hidden = false; placeholder.hidden = true; image.alt = title; };
+    const revealFigure = async () => {
+      try { if (typeof image.decode === 'function') await image.decode(); } catch (_) { /* A loaded image can still be displayed. */ }
+      showFigure();
+    };
+    image.addEventListener('load', revealFigure);
+    image.addEventListener('error', () => { image.hidden = true; imageLink.hidden = true; placeholder.hidden = false; });
     const imagePath = window.PROFILE_FIGURES?.[figure.dataset.figure];
-    if (typeof imagePath === 'string' && imagePath.trim()) image.src = imagePath;
-    if (image.complete && image.naturalWidth) showFigure();
+    if (typeof imagePath === 'string' && imagePath.trim()) {
+      imageLink.href = imagePath;
+      imageLink.setAttribute('aria-label', `View figure: ${title}`);
+      if (figureObserver) {
+        image.dataset.src = imagePath;
+        figureObserver.observe(figure);
+      } else image.src = imagePath;
+    }
+    if (image.complete && image.naturalWidth) revealFigure();
   });
   const year = document.querySelector('#year');
   if (year) year.textContent = new Date().getFullYear();
