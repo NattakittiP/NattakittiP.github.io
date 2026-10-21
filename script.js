@@ -43,20 +43,17 @@
   }, {rootMargin: '450px 0px'}) : null;
   document.querySelectorAll('.work-figure').forEach(figure => {
     const image = figure.querySelector('img');
-    const imageLink = figure.querySelector('.figure-image-link');
     const placeholder = figure.querySelector('.figure-placeholder');
     const title = figure.closest('.work').querySelector('.work-title').textContent.trim();
-    const showFigure = () => { image.hidden = false; imageLink.hidden = false; placeholder.hidden = true; image.alt = title; };
+    const showFigure = () => { image.hidden = false; placeholder.hidden = true; image.alt = title; };
     const revealFigure = async () => {
       try { if (typeof image.decode === 'function') await image.decode(); } catch (_) { /* A loaded image can still be displayed. */ }
       showFigure();
     };
     image.addEventListener('load', revealFigure);
-    image.addEventListener('error', () => { image.hidden = true; imageLink.hidden = true; placeholder.hidden = false; });
+    image.addEventListener('error', () => { image.hidden = true; placeholder.hidden = false; });
     const imagePath = window.PROFILE_FIGURES?.[figure.dataset.figure];
     if (typeof imagePath === 'string' && imagePath.trim()) {
-      imageLink.href = imagePath;
-      imageLink.setAttribute('aria-label', `View figure: ${title}`);
       if (figureObserver) {
         image.dataset.src = imagePath;
         figureObserver.observe(figure);

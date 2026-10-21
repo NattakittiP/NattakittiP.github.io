@@ -16,7 +16,7 @@ A static academic profile built with HTML, CSS, and JavaScript. No build step or
 
 The keys identify the image slots; the value can point to a PNG, JPG, SVG, or WebP file. Leave the value empty to show a placeholder. Selected works and their category entries automatically share the same image. Figures are displayed without cropping.
 
-Images load as their entries approach the viewport. Every Research and Projects entry, including Selected Work, uses the same image frame dimensions at each screen size. Click a figure to view it at full size.
+Images load as their entries approach the viewport. Every Research and Projects entry, including Selected Work, uses the same image frame dimensions at each screen size. Figures are static and do not open links when clicked. Section headings have no numbered prefixes.
 
 ## Content and layout
 
