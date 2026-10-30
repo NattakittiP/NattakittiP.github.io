@@ -24,3 +24,10 @@ h1{max-width:8.7em}h1 .cn-name{line-height:1;vertical-align:baseline}.prose p{fo
 .affiliation{max-width:none;white-space:nowrap}
 /* Keep each work's resource list in the same vertical reading order. */
 .work-resources{flex-direction:column;flex-wrap:nowrap;align-items:flex-start;gap:2px}
+
+/* Funding details use the existing portfolio typography. */
+.funding-summary{margin-top:12px}
+.funding-summary p{font-size:14px;line-height:1.85}
+.funding-project-link{margin-top:12px;font-size:12px}
+.project-funding{padding-top:16px;border-top:1px solid var(--line)}
+#project-tscept-evaluation,#funding-tscept2026{scroll-margin-top:110px}

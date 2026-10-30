@@ -10,5 +10,7 @@ window.PROFILE_FIGURES = {
   "llm-network.jpg": "assets/research/llm-network.png",
   "knowbind.jpg": "assets/research/knowbind.png",
   "wei-smart-poed.jpg": "assets/research/wei-smart-poed.png",
-  "proctify.jpg": "assets/research/proctify.png"
+  "proctify.jpg": "assets/research/proctify.png",
+  "hsr2026-poster.jpg": "assets/research/hsr2026-thinkathon.png",
+  "tscept-evaluation.jpg": "assets/research/tscept-evaluation.png"
 };
