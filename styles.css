@@ -31,3 +31,7 @@ h1{max-width:8.7em}h1 .cn-name{line-height:1;vertical-align:baseline}.prose p{fo
 .funding-project-link{margin-top:12px;font-size:12px}
 .project-funding{padding-top:16px;border-top:1px solid var(--line)}
 #project-tscept-evaluation,#funding-tscept2026{scroll-margin-top:110px}
+
+/* Use deliberate project-title breaks only above the mobile layout. */
+.project-title-break{display:none}
+@media(min-width:761px){.project-title-break{display:initial}}
