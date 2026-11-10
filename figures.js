@@ -1,4 +1,3 @@
-// Add an image path on the right, or leave it empty to keep the placeholder.
 window.PROFILE_FIGURES = {
   "triglyceride-model.jpg": "assets/research/triglyceride-model.png",
   "blood-viscosity.jpg": "assets/research/blood-viscosity.png",
@@ -12,5 +11,7 @@ window.PROFILE_FIGURES = {
   "wei-smart-poed.jpg": "assets/research/wei-smart-poed.png",
   "proctify.jpg": "assets/research/proctify.png",
   "hsr2026-poster.jpg": "assets/research/hsr2026-thinkathon.png",
-  "tscept-evaluation.jpg": "assets/research/tscept-evaluation.png"
+  "tscept-evaluation.jpg": "assets/research/tscept-evaluation.png",
+  "icauc-llm-testbed.jpg": "assets/research/icauc-llm-testbed.png",
+  "dasa-missingness-shift.jpg": "assets/research/dasa-missingness-shift.png"
 };
