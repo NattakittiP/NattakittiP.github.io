@@ -13,5 +13,6 @@ window.PROFILE_FIGURES = {
   "hsr2026-poster.jpg": "assets/research/hsr2026-thinkathon.png",
   "tscept-evaluation.jpg": "assets/research/tscept-evaluation.png",
   "icauc-llm-testbed.jpg": "assets/research/icauc-llm-testbed.png",
-  "dasa-missingness-shift.jpg": "assets/research/dasa-missingness-shift.png"
+  "dasa-missingness-shift.jpg": "assets/research/dasa-missingness-shift.png",
+  "prism-personality.jpg": "assets/research/prism-personality.png"
 };
